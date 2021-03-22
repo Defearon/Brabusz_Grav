@@ -1,0 +1,19 @@
+<header id="header">
+      <div class="container">
+        <div class="animate__wobble">
+          <h1 class="navbar-brand navbar-brand_"><a href="{{ base_url_absolute }}"><img alt="Logo" width="300px" height="75px" src="{{ theme_url }}/img/logo.svg"></a></h1>
+        </div>
+      </div>
+      <div class="menuheader">
+          <div class="container">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar" role="navigation">
+                {% include 'partials/navigation.html.twig' %}
+            </nav>
+
+          </div>
+
+          {% include 'partials/language-selector.html.twig' %}
+  
+          <br/>
+      </div>
+</header>

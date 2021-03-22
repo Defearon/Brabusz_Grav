@@ -1,0 +1,4 @@
+enabled: true
+color: orange
+dropdown:
+  enabled: false
