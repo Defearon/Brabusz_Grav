@@ -4,7 +4,7 @@ menu: Worker's transport
 slug: dolgozoszallitas
 class: privacy_page
 ---
-[div class="animate__animated animate__fadeInUp animate__slow"]
+
 #Header1
 ##Header2
 ###Header3
@@ -15,4 +15,3 @@ Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus p
 Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultri cies pharetra magna. Donec accumsan male suada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, Ut tellus dolor, dapibus cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.
-[/div]

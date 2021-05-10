@@ -1,3 +1,4 @@
+<!--
 ---
 portfolio:
     - image: page1_img4.jpg
@@ -29,3 +30,4 @@ portfolio:
       linkurl: "#"
       linktext: "tovább..."  
 ---
+-->

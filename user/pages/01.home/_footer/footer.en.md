@@ -6,7 +6,7 @@ about:
   text: TEXT TO PLACE
   readme_url: "/jarmupark"
   readme_text: read more
-  classes: scroll-fadeInLeft hidden-before
+  classes:
 services_title: Services  
 services_classes: none  
 services:
@@ -15,12 +15,12 @@ services:
     classes: scroll-fadeInUp
   - text: Worker's transport
     url: "/dolgozoszallitas"  
-    classes: scroll-fadeInUp hidden-before
+    classes:
 locations:
   title: Locations
   logo: smalllogo.svg
   text: H-2523 Sárisáp, Május 1. sor 23.
   email: brabusz2012@gmail.com
   phone: +36 (30) 1234567
-  classes:  scroll-fadeInRight hidden-before
+  classes:  
 ---

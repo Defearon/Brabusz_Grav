@@ -1,3 +1,10 @@
+/*------- VAR -------*/
+:root{
+	--bgvar: url(../img/pattern2.jpg) 0 0 repeat;
+	--txtcolor: #474848;
+
+}
+
 /*------ SAJÁT ------*/
 th {
 	padding-top: 12px;
@@ -95,7 +102,8 @@ div.textwhite {
 /*------ template stylization ------*/
 body {
 	/*background: rgb(220,96,37);*/
-	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);
+	/*background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
+	background: #f9f9f9;
 }
 /*----------- Back to top --------------*/
 #toTop {
@@ -122,26 +130,28 @@ body {
 .row_1 {
 	text-align: center;
 	padding: 30px 0;
-	background: rgb(220,96,37);
-	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);
+	/*background: rgb(220,96,37);
+	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
+	background: #f9f9f9;
 }
 .row_2 {
 	text-align: center;
 	padding: 22px 0 0;
-	background: rgb(220,96,37);
-	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);
+	/*background: rgb(220,96,37);
+	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
+	background: #f9f9f9;
 }
 .row_3 {
 	padding: 43px 0 13px;
-	background: url(../img/pattern2.jpg) 0 0 repeat;
+	background: #f9f9f9;
 }
 .row_4 {
 	padding: 30px 0 81px;
-	background: #ffffff;
+	background: #f9f9f9;
 }
 .row_5 {
 	padding: 30px 0 98px;
-	background: #ffffff;
+	background: #f9f9f9;
 }
 .row_6 {
 	padding: 30px 0 72px;
@@ -293,8 +303,9 @@ h3 {
 }
 /*------ header ------- */
 header {
-	background: rgb(220,96,37);
-	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);
+	/*background: rgb(220,96,37);
+	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
+	background: var(--bgvar);
 	text-align: center;
 }
 /*-------- Logo -------- */
@@ -500,7 +511,7 @@ header {
 /*--- header end ------*/
 /*------ content ------- */
 .title1 {
-	color: #ffffff;
+	color: var(--txtcolor);
 	font-family: 'Georgia', serif;
 	font-size: 36px;
 	line-height: 38px;
@@ -509,7 +520,7 @@ header {
 }
 .title2 {
 	letter-spacing: 0;
-	color: #ffffff;
+	color: var(--txtcolor);
 	font-family: 'Georgia', serif;
 	font-size: 17px;
 	line-height: 26px;
@@ -550,7 +561,7 @@ header {
 	transition: all 0.2s ease;
 }
 .box1 {
-	background: #39CC43;
+	background: #253d7f;
 	margin: 1rem;
 }
 .box1 figure {
@@ -563,7 +574,7 @@ header {
 	color: #ffffff;
 }
 .box2 {
-	background: #f1d154;
+	background: #253d7f;
 	margin: 1rem;
 }
 .box2 figure {
@@ -577,7 +588,7 @@ header {
 	color: #ffffff;
 }
 .box3 {
-	background: #5bb4d6;
+	background: #253d7f;
 	margin: 1rem;
 }
 .box3 figure {
@@ -1153,21 +1164,21 @@ address p {
 	font-size: 15px;
 	line-height: 22px;
 	font-weight: normal;
-	color: #ffffff;
+	color: var(--txtcolor);
 }
 address .info p:first-child {
 	font-family: 'Arial', serif;
 	font-size: 15px;
 	line-height: 22px;
 	font-weight: normal;
-	color: #ffffff;
+	color: var(--txtcolor);
 }
 .info {
 	font-family: 'Arial', serif;
 	font-size: 15px;
 	line-height: 22px;
 	font-weight: normal;
-	color: #ffffff;
+	color: var(--txtcolor);
 }
 .padding_top1 {
 	padding-top: 31px;
@@ -1177,7 +1188,7 @@ address .info p:first-child {
 	font-size: 15px;
 	line-height: 22px;
 	font-weight: normal;
-	color: #ffffff;
+	color: var(--txtcolor);
 	margin-bottom: 0;
 }
 .info > p span {
@@ -1464,7 +1475,7 @@ address .info p:first-child {
 /*--------- footer --------- */
 footer {
 	padding: 64px 0;
-	background: url("../img/linefooter.jpg") top center repeat-x;
+	background: var(--bgvar);
 }
 /*--------------social----------------*/
 .social_icons {

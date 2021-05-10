@@ -12,6 +12,7 @@ var animations = [
   "bounceInLeft",
   "bounceInRight",
   "rubberBand",
+  "bounceOut",
 ];
 
 $(document).ready(function() {

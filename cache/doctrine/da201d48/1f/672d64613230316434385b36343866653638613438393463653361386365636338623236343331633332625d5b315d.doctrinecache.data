@@ -1,0 +1,40 @@
+1621240417
+a:2:{s:7:"content";s:2028:"<div class="row_4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 chef row4_col scroll-fadeInLeft hidden-before">
+                <h2>Járműpark</h2>
+                <a href="/jarmupark" style="text-decoration: none;">
+                  <figure><img alt="" src="/user/pages/01.home/_footer/3jarmupark.jpg" /></figure>
+                </a>
+                <p class="title3">Tekintse meg járműveinket!</p>
+                <p>SZÖVEG HELYE</p>
+                <a href="/jarmupark" class="btn-link btn-link2">tovább...<span></span></a>
+            </div>
+            <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3 row4_col none">
+                <h2>Szolgáltatások</h2>
+                <ul class="list2">
+                                            <div class="scroll-fadeInUp hidden-before">
+                          <li><a href="/szemelyszallitas">Személyszállítás (különjárat)</a></li>
+                        </div>
+                                           <div class="scroll-fadeInUp hidden-before">
+                          <li><a href="/dolgozoszallitas">Dolgozószállítás</a></li>
+                        </div>
+                                  </ul>
+           </div>
+           <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3 locations row4_col scroll-headshake hidden-before">
+            <h2>Címünk</h2>
+            <a href="/" style="text-decoration: none;">
+              <figure><img alt="" src="/user/pages/01.home/_footer/smalllogo.svg" /></figure>
+            </a>
+            <p class="title4">H-2523 Sárisáp, Május 1. sor 23.</p>
+            <hr class="line1">
+            <a href="mailto:brabusz2012@gmail.com" class="btn-link btn-link3"><span></span>brabusz2012@gmail.com</a>
+            <br/> <br/>
+            <a href="tel.:+36 (30) 1234567" class="btn-link btn-link5"><span></span>+36 (30) 1234567</a>
+
+        </div>
+    </div>
+</div>
+</div>
+";s:12:"content_meta";N;}
