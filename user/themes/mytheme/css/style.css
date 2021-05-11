@@ -6,6 +6,11 @@
 }
 
 /*------ SAJÁT ------*/
+
+#content .row_1 .row_2 .row_3 .row_4 .row_5 .row_6 .row_7 .row_8 .row_9 .row_10 .row_11   {
+	margin-left: 2.5rem;
+}
+
 th {
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -47,7 +52,7 @@ a {
 	display: inline-block;
 }
 .btn-link5:hover {
-	color: #37383a;
+	color: #253d7f;
 	text-decoration: none;
 }
 
@@ -206,7 +211,7 @@ h3 {
 }
 .btn1 {
 	position: relative;
-	background: #545658;
+	background: #253d7f;
 	color: #ffffff;
 	font-family: 'Georgia', serif;
 	font-size: 15px;
@@ -223,7 +228,7 @@ h3 {
 }
 .btn1:hover {
 	text-decoration: none;
-	background: #ffffff;
+	background: #5c7acc;
 	color: #545658;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;

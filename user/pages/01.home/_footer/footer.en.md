@@ -12,7 +12,7 @@ services_classes: none
 services:
   - text: Private transport
     url: "/szemelyszallitas"
-    classes: scroll-fadeInUp
+    classes: 
   - text: Worker's transport
     url: "/dolgozoszallitas"  
     classes:

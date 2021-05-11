@@ -6,13 +6,13 @@ about:
   text: SZÖVEG HELYE
   readme_url: "/jarmupark"
   readme_text: tovább...
-  classes: 
+  classes:
 services_title: Szolgáltatások
 services_classes: none  
 services:
   - text: Személyszállítás (különjárat)
     url: "/szemelyszallitas"
-    classes: scroll-fadeInUp hidden-before
+    classes: 
   - text: Dolgozószállítás
     url: "/dolgozoszallitas"
     classes:
