@@ -178,6 +178,12 @@ a {
 	text-decoration: none;
 }
 
+.lng-slct {
+	position: absolute;
+	top: 90%;
+	left: 40px;
+}
+
 .language-selector
 {
 	margin-right: 100px !important;
@@ -544,7 +550,7 @@ header {
 
 .navbar-button {
 	position: absolute;
-	right: 100px;
+	right: 15vw;
 	top: 2rem;
 	padding: 0 0;
 }
