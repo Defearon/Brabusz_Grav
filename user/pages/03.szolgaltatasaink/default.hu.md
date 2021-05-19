@@ -1,6 +1,7 @@
 ---
-title: Szervíz
-slug: szerviz
+title: Szolgáltatásaink
+menu: Szolgáltatásaink
+slug: szolgaltatasaink
 class: privacy_page
 ---
 

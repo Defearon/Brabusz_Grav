@@ -1,7 +1,7 @@
 ---
-title: Worker's transport
-menu: Worker's transport
-slug: dolgozoszallitas
+title: Services
+menu: Services
+slug: szolgaltatasaink
 class: privacy_page
 ---
 

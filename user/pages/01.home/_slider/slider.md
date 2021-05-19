@@ -12,7 +12,7 @@ markdown:
 ---
 
 [owl-carousel items=1 margin=10 loop=true autoplayHoverPause=true nav=true]
-<div class="carousel-container" markdown=1>
+<div id="carousel" class="carousel-container" markdown=1>
   ![](picture1.jpg?cropZoom=1500,500)
   <div class="carousel-textblock">
     <h2>Ide lehet írni</h2>

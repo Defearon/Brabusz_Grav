@@ -1,3 +1,32 @@
+{% import 'macros/macros.html.twig' as macros %}
+
+
+<div class="inner">
+
+  <div class="navbar-logo">
+    <a href="{{ base_url_absolute }}"><img alt="Logo" width="150px" height="75px" src="{{ theme_url }}/img/logo.svg"></a>
+  </div>
+
+  <ul class="nav navbar-menu ">
+      {{ macros.nav_loop(pages) }}
+  </ul>
+
+  <div id="mobNav" class="navbar-mobile overlay">
+  <a id="nav-mobile-close" href="javascript:void(0)" class="closebtn">&times;</a>
+    <div class="overlay-content">
+      {{ macros.nav_loop(pages) }}
+    </div>
+  </div>
+
+  <span id="nav-mobile-open" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+  <div class="navbar-button">
+    <a href="/kapcsolat" class="btn btn-primary btn-sm">Ajánlatkérés</a>
+
+  </div>
+</div>
+
+<!--
 {% macro loop(page) %}
     {% for p in page.children %}
         {% if p.visible %}
@@ -16,7 +45,13 @@
     {% endfor %}
 {% endmacro %}
 
-<ul class="nav sf-menu">
+<div class="inner">
+
+<div class="navbar-logo">
+  <a href="{{ base_url_absolute }}"><img alt="Logo" width="150px" height="75px" src="{{ theme_url }}/img/logo.svg"></a>
+</div>
+
+<ul class="nav sf-menu navbar-menu">
     {% if config.themes.photographer.dropdown.enabled %}
         {{ _self.loop(pages) }}
         {% else %}
@@ -60,4 +95,14 @@
                 {% endif %}
             </li>
         {% endfor %}
-    </ul>   
+    </ul>
+
+    <div class="navbar-button">
+      <a href="/kapcsolat" class="btn btn-primary btn-sm">Ajánlatkérés</a>
+
+    </div>
+     {% include 'partials/language-selector.html.twig' %}
+
+
+</div>
+-->

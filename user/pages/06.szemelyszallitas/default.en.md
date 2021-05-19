@@ -3,6 +3,7 @@ title: 'Private transport'
 menu: Private transport
 slug: szemelyszallitas
 class: privacy_page
+visible: false
 ---
 
 #Header1

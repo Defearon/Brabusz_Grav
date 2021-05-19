@@ -3,8 +3,8 @@ title: 'Személyszállítás (különjárat)'
 menu: Személyszállítás
 slug: szemelyszallitas
 class: privacy_page
+visible: false
 ---
-
 
 #Címsor1
 ##Címsor2

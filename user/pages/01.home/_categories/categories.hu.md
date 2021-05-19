@@ -4,12 +4,12 @@ categories:
       class: box1
       title: Dolgozószállítás
       title_position: bottom
-      href: \dolgozoszallitas
+      href: \szolgaltatasaink
     - image: 2szemely.jpg
       class: box1
       title: Személyszállítás
       title_position: bottom
-      href: \szemelyszallitas
+      href: \szolgaltatasaink
     - image: 3jarmupark.jpg
       class: box1
       title: Járműpark

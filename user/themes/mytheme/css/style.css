@@ -5,7 +5,63 @@
 
 }
 
+/* SIDENAV */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
 /*------ SAJÁT ------*/
+
+.btn-primary {
+	background: #253d7f;
+	border: 0px;
+}
+
+.listbox1 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.listbox3 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
 
 /* Container holding the image and the text */
 .carousel-container {
@@ -252,7 +308,7 @@ body {
 p {
 	font-family: 'Arial', sans-serif;
 	font-size: 15px;
-	line-height: 3vw;
+	line-height: 30px;
 	color: #808080;
 	margin: 0;
 	padding: 0;
@@ -377,7 +433,7 @@ h3 {
 header {
 	/*background: rgb(220,96,37);
 	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
-	background: var(--bgvar);
+	/*background: var(--bgvar);*/
 	text-align: center;
 }
 /*-------- Logo -------- */
@@ -397,9 +453,131 @@ header {
 	text-decoration: none;
 }
 /*-----------------navbar---------------------*/
-.menuheader {
-	background: #253d7f;
+
+@media only screen and (max-width: 1200px) {
+  .navbar-menu {
+		display: none !important;
+	}
 }
+
+@media only screen and (min-width: 1200px) {
+  #nav-mobile-open {
+		display: none !important;
+	}
+}
+
+#nav-mobile-open {
+	color: #ffffff;
+}
+
+.overlay-content > li {
+	display: inline;
+	font-size: 15px !important;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.75);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+	background: rgba(0,0,0,.75) !important; /*linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,0) 100%) !important;*/
+	transition: all 1s ease;
+}
+
+.navbar-logo {
+	position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 1.5rem;
+    padding: 0;
+
+
+}
+
+.navbar-menu {
+	display: inline-block;
+	text-align: center;
+}
+
+.navbar-button {
+	position: absolute;
+	right: 100px;
+	top: 2rem;
+	padding: 0 0;
+}
+
+.container {
+	/*margin-top: 300px;*/
+}
+
+#header {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1001;
+    display: block;
+    height: 5rem;
+    padding: 0 0;
+}
+
+.menuheader {
+	background:  rgba(0,0,0,.75) !important;
+
+	position: fixed;
+	z-index: 100;
+	/*padding-bottom: 20px;*/
+	width: 100%;
+	transition: all 1s ease;
+	/*display: flex;*/
+ 	justify-content: center;
+ 	align-items: center;
+}
+
 .tm_navbar {
 	position: relative;
 	padding: 26px 0 22px;
@@ -1811,13 +1989,15 @@ footer {
 	display: block !important;
 	color: #ffffff;
 	border: 1px solid #343434;
-	background: #343434 !important;
+	background: #253d7f !important;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	position: relative;
-	width: 100%;
-	margin: 0;
-	padding: 5px;
+	top: 50%;
+	left: 40%;
+	width: 30%;
+	margin: -1rem;
+	padding: 1rem;
 }
 .select-menu option {
 	padding: 0;

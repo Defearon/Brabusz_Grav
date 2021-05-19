@@ -1,4 +1,4 @@
-last_checked: 1621337106
+last_checked: 1621430573
 data:
   -
     title: 'Skeleton Build Automation'
@@ -9,7 +9,7 @@ data:
     title: 'Using Grav''s new built-in Web Server'
     url: 'https://getgrav.org/blog/using-builtin-webserver'
     date: 1612186320
-    nicetime: '3 months ago'
+    nicetime: '4 months ago'
   -
     title: 'Grav 1.7 CLI Self-Upgrade Bug'
     url: 'https://getgrav.org/blog/grav-170-cli-self-upgrade-bug'

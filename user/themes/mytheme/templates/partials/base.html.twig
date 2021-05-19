@@ -29,6 +29,8 @@
             {% do assets.addJs('theme://js/jquery.equalheights.js') %}
             {% do assets.addJs('theme://js/camera.js') %}
             {% do assets.addJs('theme://js/animate-scroll.js') %}
+            {% do assets.addJs('theme://js/sticky.js') %}
+            {% do assets.addJs('theme://js/mobilenav.js') %}
 
             {% if browser.getBrowser == 'msie' and browser.getVersion > 9 or browser.getBrowser != 'msie' %}
                  {% do assets.addJs('theme://js/jquery.mobile.customized.min.js') %}
