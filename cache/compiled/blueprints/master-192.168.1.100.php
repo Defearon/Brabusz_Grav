@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1620641316,
-    'checksum' => 'a527bc8e71f77afe8933ba8f5c029ef7',
+    'timestamp' => 1621420208,
+    'checksum' => 'ee4be4beab4dde22a05ff9b9ee5cdc96',
     'files' => [
         'system/blueprints/config' => [
             'backups' => [
@@ -73,7 +73,11 @@ return [
             ],
             'plugins/shortcode-core' => [
                 'file' => 'user/plugins/shortcode-core/blueprints.yaml',
-                'modified' => 1615553943
+                'modified' => 1621337226
+            ],
+            'plugins/shortcode-owl-carousel' => [
+                'file' => 'user/plugins/shortcode-owl-carousel/blueprints.yaml',
+                'modified' => 1621337228
             ],
             'plugins/shortcode-ui' => [
                 'file' => 'user/plugins/shortcode-ui/blueprints.yaml',
@@ -5242,6 +5246,26 @@ return [
                 'name' => 'plugins.shortcode-core.custom_shortcodes',
                 'validation' => 'strict'
             ],
+            'plugins.shortcode-core.css' => [
+                'type' => '_parent',
+                'name' => 'plugins.shortcode-core.css',
+                'form_field' => false
+            ],
+            'plugins.shortcode-core.css.notice_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Enbable Notice Shortcode CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.css.notice_enabled',
+                'validation' => 'strict'
+            ],
             'plugins.shortcode-core.fontawesome' => [
                 'type' => '_parent',
                 'name' => 'plugins.shortcode-core.fontawesome',
@@ -5282,6 +5306,43 @@ return [
                     'type' => 'bool'
                 ],
                 'name' => 'plugins.shortcode-core.fontawesome.v5',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-owl-carousel' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.shortcode-owl-carousel.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin Enabled',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-owl-carousel.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-owl-carousel.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'Use Built-in CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-owl-carousel.built_in_css',
                 'validation' => 'strict'
             ],
             'plugins.shortcode-ui' => [
@@ -6207,11 +6268,18 @@ return [
                     'admin_pages_only' => 'plugins.shortcode-core.admin_pages_only',
                     'parser' => 'plugins.shortcode-core.parser',
                     'custom_shortcodes' => 'plugins.shortcode-core.custom_shortcodes',
+                    'css' => [
+                        'notice_enabled' => 'plugins.shortcode-core.css.notice_enabled'
+                    ],
                     'fontawesome' => [
                         'load' => 'plugins.shortcode-core.fontawesome.load',
                         'url' => 'plugins.shortcode-core.fontawesome.url',
                         'v5' => 'plugins.shortcode-core.fontawesome.v5'
                     ]
+                ],
+                'shortcode-owl-carousel' => [
+                    'enabled' => 'plugins.shortcode-owl-carousel.enabled',
+                    'built_in_css' => 'plugins.shortcode-owl-carousel.built_in_css'
                 ],
                 'shortcode-ui' => [
                     'enabled' => 'plugins.shortcode-ui.enabled',

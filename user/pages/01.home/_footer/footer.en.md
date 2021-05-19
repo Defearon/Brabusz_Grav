@@ -12,13 +12,13 @@ services_classes: none
 services:
   - text: Private transport
     url: "/szemelyszallitas"
-    classes: 
+    classes:
   - text: Worker's transport
     url: "/dolgozoszallitas"  
     classes:
 locations:
   title: Locations
-  logo: smalllogo.svg
+  logo: logo.svg
   text: H-2523 Sárisáp, Május 1. sor 23.
   email: brabusz2012@gmail.com
   phone: +36 (30) 1234567

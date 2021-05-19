@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/Work/git/Brabusz_Grav/user/plugins/shortcode-core/shortcode-core.yaml',
-    'modified' => 1615553943,
+    'modified' => 1621337226,
     'data' => [
         'enabled' => true,
         'active' => true,
@@ -10,6 +10,9 @@ return [
         'admin_pages_only' => true,
         'parser' => 'regular',
         'include_default_shortcodes' => true,
+        'css' => [
+            'notice_enabled' => true
+        ],
         'custom_shortcodes' => NULL,
         'fontawesome' => [
             'load' => true,

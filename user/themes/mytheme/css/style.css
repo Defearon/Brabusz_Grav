@@ -7,9 +7,75 @@
 
 /*------ SAJÁT ------*/
 
-#content .row_1 .row_2 .row_3 .row_4 .row_5 .row_6 .row_7 .row_8 .row_9 .row_10 .row_11   {
-	margin-left: 2.5rem;
+/* Container holding the image and the text */
+.carousel-container {
+  position: relative;
+	width: 100%;
 }
+
+.carousel-btn {
+	padding: 1vw;
+	font-size: 1.5vw;
+	margin: 1vw;
+}
+
+/* Bottom right text */
+.carousel-textblock {
+	position: absolute;
+  display: block;
+  width: 50%;
+  /*bottom: 20%;*/
+	left: 25%;
+	bottom: 20%;
+  font-size: 1vw;
+	background-color: rgba(0,0,0,0.5);
+  color: #FFF;
+  text-shadow: 0 .125em .125em rgba(0, 0, 0, .65);
+	text-align: center;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+
+}
+
+.carousel-textblock > p {
+	color: white !important;
+	margin: 0;
+	font-size: 1.5vw;
+}
+
+.carousel-textblock > h1 {
+	color: white !important;
+	margin: 0;
+	font-size: 4vw;
+}
+.carousel-textblock > h2 {
+	color: white !important;
+	margin: 0;
+	font-size: 3vw;
+}
+.carousel-textblock > h3 {
+	font-size: 2vw;
+	color: white !important;
+}
+.carousel-textblock > h4 {
+	color: white !important;
+	font-size: 1.5vw
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*.row_1 .row_2 .row_3 .row_4 .row_5 .row_6 .row_7 .row_8 .row_9 .row_10 .row_11   {
+	padding-left: 2.5rem !important;
+	margin-right: 1.5rem;
+}*/
+
+
 
 th {
 	padding-top: 12px;
@@ -134,59 +200,59 @@ body {
 /*-----------row_s--------------*/
 .row_1 {
 	text-align: center;
-	padding: 30px 0;
+	padding: 30px 1.5rem;
 	/*background: rgb(220,96,37);
 	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
 	background: #f9f9f9;
 }
 .row_2 {
 	text-align: center;
-	padding: 22px 0 0;
+	padding: 22px 1.5rem 0;
 	/*background: rgb(220,96,37);
 	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
 	background: #f9f9f9;
 }
 .row_3 {
-	padding: 43px 0 13px;
+	padding: 43px 1.5rem 13px;
 	background: #f9f9f9;
 }
 .row_4 {
-	padding: 30px 0 81px;
+	padding: 30px 1.5rem 81px;
 	background: #f9f9f9;
 }
 .row_5 {
-	padding: 30px 0 98px;
+	padding: 30px 1.5rem 98px;
 	background: #f9f9f9;
 }
 .row_6 {
-	padding: 30px 0 72px;
+	padding: 30px 1.5rem 72px;
 	background: #ffffff;
 }
 .row_7 {
-	padding: 30px 0 80px;
+	padding: 30px 1.5rem 80px;
 	background: #ffffff;
 }
 .row_8 {
-	padding: 63px 0 112px;
+	padding: 63px 1.5rem 112px;
 	background: #ffffff;
 }
 .row_9 {
-	padding: 31px 0 90px;
+	padding: 31px 1.5rem 90px;
 	background: #ffffff;
 }
 .row_10 {
-	padding: 101px 0 85px;
+	padding: 101px 1.5rem 85px;
 	background: #ffffff;
 }
 .row_11 {
-	padding: 40px 0 40px;
+	padding: 40px 1.5rem 40px;
 	background: #ffffff;
 }
 /*------------links headings-----------*/
 p {
 	font-family: 'Arial', sans-serif;
 	font-size: 15px;
-	line-height: 22px;
+	line-height: 3vw;
 	color: #808080;
 	margin: 0;
 	padding: 0;
@@ -198,7 +264,7 @@ h2 {
 	line-height: 28px;
 	color: #474848;
 	margin: 0;
-	padding: 35px 0;
+	padding: 2vw 0;
 }
 h3 {
 	text-transform: uppercase;
@@ -206,7 +272,7 @@ h3 {
 	font-size: 12px;
 	line-height: 20px;
 	color: #4e4134;
-	margin: 0 0 10px;
+	margin: 0 0 1vw;
 	padding: 0;
 }
 .btn1 {
@@ -229,9 +295,10 @@ h3 {
 .btn1:hover {
 	text-decoration: none;
 	background: #5c7acc;
-	color: #545658;
+	color: #ffffff;
 	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	transition: all .2s ease-in-out;
+	transform: scale(1.1);
 }
 .btn-link1 {
 	position: relative;
@@ -560,10 +627,11 @@ header {
 	text-decoration: none;
 }
 .list1 li a:hover p {
-	color: #4e4134;
+	color: #ffffff;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+	transform: scale(1.1);
 }
 .box1 {
 	background: #253d7f;

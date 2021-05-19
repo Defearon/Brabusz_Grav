@@ -1,0 +1,22 @@
+1621337828
+C:39:"Grav\Common\Flex\Types\Pages\PageObject":1363:{a:4:{s:4:"type";s:5:"pages";s:3:"key";s:8:"location";s:8:"elements";a:3:{s:4:"root";b:0;s:6:"header";a:7:{s:5:"title";s:8:"Location";s:6:"title2";s:7:"Contact";s:4:"menu";s:8:"location";s:7:"visible";b:0;s:11:"onpage_menu";b:1;s:3:"map";s:350:"<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>";s:11:"simple_form";a:3:{s:5:"token";s:19:"token-by-simpleform";s:13:"template_file";s:7:"contact";s:11:"redirect_to";s:22:"/thank-you-for-contact";}}s:8:"markdown";s:324:"##Postal Address
+<address markdown="1">
+**8901 Marmora Road, Glasgow, D04 89GR.**
+
+Telephone: +1 959 603 6035
+
+FAX:  +1 504 889 9898
+
+E-mail: mail@demolink.org
+</address>
+
+<address markdown="1">
+**9867 Mill Road, Cambridge, MG09 99HT**
+
+Telephone: +1 959 603 6035
+
+FAX: +1 504 889 9898
+
+E-mail: mail@demolink.org
+</address>
+";}s:7:"storage";a:6:{s:3:"key";s:8:"location";s:11:"storage_key";s:11:"05.location";s:8:"template";s:8:"location";s:17:"storage_timestamp";i:1615149706;s:8:"markdown";a:1:{s:0:"";a:1:{s:8:"location";i:1615149706;}}s:8:"checksum";s:32:"43e2106c8178760ea1f8aa240bed869d";}}}

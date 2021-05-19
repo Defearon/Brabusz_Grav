@@ -39,21 +39,23 @@ class __TwigTemplate_e229a64c115d788f53b81dd254c0ba3a633c6602573c2bb1ccbf02418ca
         </div>
       </div>
       <div class=\"menuheader\">
-          <div class=\"container\">
+        ";
+        // line 8
+        $this->loadTemplate("partials/language-selector.html.twig", "partials/header.html.twig", 8)->display($context);
+        // line 9
+        echo "          <div class=\"container\">
             <nav class=\"navbar navbar-default navbar-static-top tm_navbar\" role=\"navigation\">
                 ";
-        // line 10
-        $this->loadTemplate("partials/navigation.html.twig", "partials/header.html.twig", 10)->display($context);
         // line 11
-        echo "            </nav>
+        $this->loadTemplate("partials/navigation.html.twig", "partials/header.html.twig", 11)->display($context);
+        // line 12
+        echo "
+            </nav>
 
           </div>
 
-          ";
-        // line 15
-        $this->loadTemplate("partials/language-selector.html.twig", "partials/header.html.twig", 15)->display($context);
-        // line 16
-        echo "  
+
+
           <br/>
       </div>
 </header>
@@ -72,7 +74,7 @@ class __TwigTemplate_e229a64c115d788f53b81dd254c0ba3a633c6602573c2bb1ccbf02418ca
 
     public function getDebugInfo()
     {
-        return array (  56 => 16,  54 => 15,  48 => 11,  46 => 10,  35 => 4,  30 => 1,);
+        return array (  52 => 12,  50 => 11,  46 => 9,  44 => 8,  35 => 4,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -92,15 +94,17 @@ class __TwigTemplate_e229a64c115d788f53b81dd254c0ba3a633c6602573c2bb1ccbf02418ca
         </div>
       </div>
       <div class=\"menuheader\">
+        {% include 'partials/language-selector.html.twig' %}
           <div class=\"container\">
             <nav class=\"navbar navbar-default navbar-static-top tm_navbar\" role=\"navigation\">
                 {% include 'partials/navigation.html.twig' %}
+
             </nav>
 
           </div>
 
-          {% include 'partials/language-selector.html.twig' %}
-  
+
+
           <br/>
       </div>
 </header>

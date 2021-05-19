@@ -1,0 +1,35 @@
+1621940444
+a:2:{s:7:"content";s:1837:"<div class="row_2">
+    <div class="container">
+        <div class="row">
+            <ul class="list1">
+                                    <li class="col-lg-4 col-md-4 col-sm-4 listbox1">
+                        <div class="box1">
+                            <a href="\dolgozoszallitas">
+                                                                <figure><img alt="" src="/user/pages/01.home/_categories/1dolgozo.jpg" /></figure>
+                                                                    <p>Dolgozószállítás</p>
+                                                            </a>
+                        </div>
+                    </li>
+                                    <li class="col-lg-4 col-md-4 col-sm-4 listbox2">
+                        <div class="box2">
+                            <a href="\szemelyszallitas">
+                                                                <figure><img alt="" src="/user/pages/01.home/_categories/2szemely.jpg" /></figure>
+                                                                    <p>Személyszállítás</p>
+                                                            </a>
+                        </div>
+                    </li>
+                                    <li class="col-lg-4 col-md-4 col-sm-4 listbox3">
+                        <div class="box3">
+                            <a href="\jarmupark">
+                                                                <figure><img alt="" src="/user/pages/01.home/_categories/3jarmupark.jpg" /></figure>
+                                                                    <p>Járműpark</p>
+                                                            </a>
+                        </div>
+                    </li>
+                                <p><br/></p>
+            </ul>
+        </div>
+    </div>
+</div>
+";s:12:"content_meta";N;}

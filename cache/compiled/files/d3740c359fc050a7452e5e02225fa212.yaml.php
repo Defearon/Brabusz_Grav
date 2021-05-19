@@ -2,12 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/Work/git/Brabusz_Grav/user/plugins/shortcode-core/blueprints.yaml',
-    'modified' => 1615553943,
+    'modified' => 1621337226,
     'data' => [
         'name' => 'Shortcode Core',
         'slug' => 'shortcode-core',
         'type' => 'plugin',
-        'version' => '5.0.5',
+        'version' => '5.0.6',
         'description' => 'This plugin provides the core functionality for shortcode plugins',
         'icon' => 'code',
         'author' => [
@@ -101,6 +101,20 @@ return [
                     'help' => 'The path to a location where you store custom shortcodes.',
                     'placeholder' => '/user/custom/shortcodes',
                     'size' => 'large'
+                ],
+                'css.notice_enabled' => [
+                    'type' => 'toggle',
+                    'label' => 'Enbable Notice Shortcode CSS',
+                    'help' => 'Enable the default notice CSS by default. Disable if you want to use your own custom CSS.',
+                    'highlight' => 1,
+                    'default' => 1,
+                    'options' => [
+                        1 => 'Enabled',
+                        0 => 'Disabled'
+                    ],
+                    'validate' => [
+                        'type' => 'bool'
+                    ]
                 ],
                 'fontawesome.load' => [
                     'type' => 'toggle',

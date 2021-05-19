@@ -1,5 +1,12 @@
+# v5.0.6
+## 04/27/2021
+
+1. [](#improved)
+    * Added the ability to enable/disable built-in notice CSS
+    * NextGen Editor: Added support for multiple editor instances
+
 # v5.0.5
-## 03/10/2021
+## 03/12/2021
 
 1. [](#bugfix)
     * `SafeEmailShortcode` fixed to be compatible with PHP 7.4

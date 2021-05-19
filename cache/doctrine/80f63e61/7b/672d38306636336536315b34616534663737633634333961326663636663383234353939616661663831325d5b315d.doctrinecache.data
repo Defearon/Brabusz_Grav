@@ -1,0 +1,10 @@
+1621944730
+a:2:{s:7:"content";s:260:"
+  <div class="owl-carousel owl-theme" id="owl-4d03ec02ac">
+    <img alt="" src="/images/b/c/c/6/d/bcc6d4c4205d502481c3b8f10a64bc8b82c4a53a-picture1.jpg" />
+<img alt="" src="/images/3/0/6/2/3/3062389793e4855cd68825bef0631ca9e8dead6e-picture2.jpg" />
+
+</div>
+
+
+";s:12:"content_meta";a:1:{s:13:"shortcodeMeta";a:1:{s:15:"shortcodeAssets";a:3:{s:2:"js";a:2:{i:0;a:2:{i:0;s:6:"jquery";i:1;i:101;}i:1;s:54:"plugin://shortcode-owl-carousel/js/owl.carousel.min.js";}s:3:"css";a:3:{i:0;s:56:"plugin://shortcode-owl-carousel/css/owl.carousel.min.css";i:1;s:61:"plugin://shortcode-owl-carousel/css/owl.theme.default.min.css";i:2;s:62:"plugin://shortcode-owl-carousel/css/shortcode.owl.carousel.css";}s:8:"inlinejs";a:1:{i:0;s:158:"$(document).ready(function(){ $("#owl-4d03ec02ac").owlCarousel({"items":1,"margin":10,"loop":true,"autoplay":true,"autoplayHoverPause":true,"nav":true}); }); ";}}}}}

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1620641316,
-    'checksum' => '331d2d8d2d035904b355d2b8b55461d6',
+    'timestamp' => 1621420208,
+    'checksum' => '9e104d87e541195993ba9f2c8c502611',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -111,7 +111,11 @@ return [
             ],
             'plugins/shortcode-core' => [
                 'file' => 'user/plugins/shortcode-core/shortcode-core.yaml',
-                'modified' => 1615553943
+                'modified' => 1621337226
+            ],
+            'plugins/shortcode-owl-carousel' => [
+                'file' => 'user/plugins/shortcode-owl-carousel/shortcode-owl-carousel.yaml',
+                'modified' => 1621337228
             ],
             'plugins/shortcode-ui' => [
                 'file' => 'user/plugins/shortcode-ui/shortcode-ui.yaml',
@@ -451,6 +455,9 @@ return [
                 'admin_pages_only' => true,
                 'parser' => 'regular',
                 'include_default_shortcodes' => true,
+                'css' => [
+                    'notice_enabled' => true
+                ],
                 'custom_shortcodes' => NULL,
                 'fontawesome' => [
                     'load' => true,
@@ -462,6 +469,10 @@ return [
                     'dev_host' => 'localhost',
                     'dev_port' => 2001
                 ]
+            ],
+            'shortcode-owl-carousel' => [
+                'enabled' => true,
+                'built_in_css' => true
             ],
             'shortcode-ui' => [
                 'enabled' => true,
