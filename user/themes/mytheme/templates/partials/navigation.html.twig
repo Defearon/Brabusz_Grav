@@ -25,7 +25,10 @@
   <span id="nav-mobile-open" style="font-size:30px;cursor:pointer">&#9776;</span>
 
   <div class="navbar-button each">
-    <a href="/kapcsolat" class="ajanlat "><span>Kérjen ajánlatot!</span></a>
+    <div class="lng-sel">
+      {% include 'partials/language-selector.html.twig' %}
+    </div>
+    <a href="/kapcsolat" class="ajanlat "><span>Ajánlatkérés!</span></a>
   </div>
 
 </div>

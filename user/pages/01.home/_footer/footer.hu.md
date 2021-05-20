@@ -6,7 +6,7 @@ about:
   text: SZÖVEG HELYE
   readme_url: "/jarmupark"
   readme_text: tovább...
-  classes:
+  classes: box-shadow-figure
 services_title: Szolgáltatások
 services_classes: none  
 services:

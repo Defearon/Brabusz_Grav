@@ -14,6 +14,6 @@ categories:
       class: box1
       title: Járműpark
       title_position: bottom
-      href: \jarmupark      
+      href: \jarmupark     
 ---
 <br/>
