@@ -171,30 +171,36 @@
 }
 
 .sticky .navbar-button {
-	margin-top: 0;
-	margin-bottom: -7.25rem;
+/*	margin-top: 0;*/
+	/*margin-bottom: -7.25rem;*/
 	transition: all 1s ease;
 }
 
+
 .sticky .ajanlat {
 	border: 3px solid #dc6025;
-	transition: all .2s ease;
 }
 
 .navbar-button {
 	align-self: end;
 	justify-self: end;
 	transition: all 1s ease;
-	margin-right: -4rem;
+	/*margin-right: -4rem;*/
+}
+.sticky .language-selector {
+	transition: all 1s ease;
+	opacity: 0;
 }
 
-.sticky .lng-sel {
-	display: none;
-}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
 
 .language-selector
 {
 	z-index: 100;
+	position: absolute !important;
+	top: 20px !important;
+	right: 100px !important;
 }
 
 .container {
@@ -228,9 +234,9 @@
 }
 
 .ajanlat {
-	white-space: nowrap;
+/*	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;
+	text-overflow: ellipsis;*/
 	background: #253d7f;
 	color: #fff !important;
 	font-weight: 700;
@@ -239,11 +245,26 @@
   border: 0;
   outline: 0;
   font-size: 1.5rem;
-  padding: 1rem 3rem;
   display: inline-block;
   transform: skew(-30deg);
   &:visited { color: #fff; }
   &:hover { background: #0069a8; }
+}
+
+/* kicsi */
+@media only screen and (max-width: 1350px) {
+	.ajanlat {
+		  padding: 1rem 2rem;
+				margin-right: -3.5rem !important;
+	}
+}
+
+/* Nagy */
+@media only screen and (min-width: 1350px) {
+	.ajanlat {
+		  padding: 2rem 4rem;
+			margin-right: 10rem;
+	}
 }
 
 .ajanlat > span {
@@ -2125,4 +2146,78 @@ footer {
 /*Core variables and mixins*/
 img {
 	max-width: 100%;
+}
+
+/*===================*/
+/* WOOBLE VERTICAL
+/*===================*/
+
+@-webkit-keyframes wobble-vertical-on-hover {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes wobble-vertical-on-hover {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.wobble-vertical-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.wobble-vertical-on-hover:hover, .wobble-vertical-on-hover:focus, .wobble-vertical-on-hover:active {
+  -webkit-animation-name: wobble-vertical-on-hover;
+  animation-name: wobble-vertical-on-hover;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }

@@ -4,13 +4,19 @@ slug: referenciak
 class: privacy_page
 ---
 
-#Header1
-##Header2
-###Header3
-####Header4
-#####Header5
-Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penati et magnis dis parturient montes, nascetur ridiculus mus. Fusce feugiat malesuada odio.
-
-Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultri cies pharetra magna. Donec accumsan male suada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, Ut tellus dolor, dapibus cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.
+[center]
+#**Referenes**
+[/center]
+<hr style="border: 1px solid black;"/>
+[div class="animate__animated animate__fadeInUp"]
+[columns count=3 gap=120px]
+[![Aptiv](Aptiv.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "Aptiv")](https://www.aptiv.com/)
+[![DHL](DHL.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "DHL")](https://www.dhl.com/hu-hu/home.html)
+[![Gedia](Gedia.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "Gedia")](https://www.gedia.com/en/)
+[![Knaus](Knaus.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "KnausTabbert")](https://knaus.hu/)
+[![Livita](Livita.jpg?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "Livita")](https://livita.hu/)
+[![Mahle](Mahle.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "Mahle")](https://www.mahle.com/)
+[![Quehenberger](Quehenberger.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "Quehenberger")](https://www.quehenberger.com/hu)
+[![Wescast](Wescast.png?resize=200,200&classes=caption,caption-center,wobble-vertical-on-hover "Wescast")](http://www.wescast.hu/)
+[/columns]
+[/div]

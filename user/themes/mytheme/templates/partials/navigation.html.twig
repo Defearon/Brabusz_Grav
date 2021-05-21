@@ -2,10 +2,7 @@
 
 
 <div class="inner">
-<!--
-<div class = "lng-slct">
- {% include 'partials/language-selector.html.twig' %}
-</div>-->
+
   <div class="navbar-logo">
     <a href="{{ base_url_absolute }}"><img alt="Logo" width="400px" height="100px" src="{{ theme_url }}/img/logo.svg"></a>
   </div>
@@ -24,12 +21,14 @@
 
   <span id="nav-mobile-open" style="font-size:30px;cursor:pointer">&#9776;</span>
 
-  <div class="navbar-button each">
-    <div class="lng-sel">
-      {% include 'partials/language-selector.html.twig' %}
+
+    <div class="navbar-button each">
+      <a href="/kapcsolat" class="ajanlat "><span>Ajánlatkérés!</span></a>
     </div>
-    <a href="/kapcsolat" class="ajanlat "><span>Ajánlatkérés!</span></a>
-  </div>
+
+    {% include 'partials/language-selector.html.twig' %}
+
+
 
 </div>
 

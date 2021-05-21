@@ -6,7 +6,7 @@ about:
   text: TEXT TO PLACE
   readme_url: "/jarmupark"
   readme_text: read more
-  classes:
+  classes: box-shadow-figure
 services_title: Services  
 services_classes: none  
 services:
