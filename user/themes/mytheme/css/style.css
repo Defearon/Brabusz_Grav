@@ -171,8 +171,8 @@
 }
 
 .sticky .navbar-button {
-/*	margin-top: 0;*/
-	/*margin-bottom: -7.25rem;*/
+	margin-top: 0;
+	margin-bottom: -6rem;
 	transition: all 1s ease;
 }
 
@@ -262,6 +262,9 @@
 /* Nagy */
 @media only screen and (min-width: 1350px) {
 	.ajanlat {
+		position: absolute !important;
+		top: -7rem;
+		right: 2rem;
 		  padding: 2rem 4rem;
 			margin-right: 10rem;
 	}
@@ -676,7 +679,8 @@ header {
 .tm_navbar .nav {
 	float: none;
 	position: relative;
-	display: inline-block;
+	/*display: inline-block;*/
+	display: flex;
 }
 .tm_navbar ul {
 	position: relative;
