@@ -11,6 +11,7 @@ cache/*
 !cache/.*
 assets/*
 !assets/.*
+**/logs/
 logs/
 !logs/.*
 logs/**
