@@ -7,6 +7,11 @@
 
 /*------ SAJÁT ------*/
 
+
+.navbar-menu li a:hover {
+	color: #f47920 !important;
+}
+
 /* SIDENAV */
 .sidenav {
   height: 100%;
@@ -31,7 +36,7 @@
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #f47920;
 }
 
 .sidenav .closebtn {
@@ -158,7 +163,7 @@
 
 .navbar-menu li a {
 	color: #253d7f;
-	font-size: 15px;
+	font-size: 17px;
 	line-height: 20px;
 	font-weight: bold;
 }
@@ -172,13 +177,13 @@
 
 .sticky .navbar-button {
 	margin-top: 0;
-	margin-bottom: -6rem;
+	margin-bottom: -4rem;
 	transition: all 1s ease;
 }
 
 
 .sticky .ajanlat {
-	border: 3px solid #dc6025;
+	border: 5px solid #f47920;
 }
 
 .navbar-button {
@@ -671,10 +676,11 @@ header {
 
 .tm_navbar {
 	position: relative;
-	/*padding: 26px 0 22px;*/
+	padding: 0;
 	margin: 0;
 	background: none;
 	border: none;
+	margin-bottom: -2rem;
 }
 .tm_navbar .nav {
 	float: none;
@@ -704,12 +710,11 @@ header {
 .tm_navbar .nav li a {
 	text-decoration: none;
 	/*text-transform: lowercase;*/
-	font-family: 'Georgia', serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: transparent;
 	padding: 0;
 	border: none;
 	border-radius: 0;
-	text-shadow: 1px 1px 2px #333639;
 }
 .tm_navbar .nav > li > a .sf-sub-indicator {
 	background: url(../img/indicator.png) no-repeat 0 bottom;

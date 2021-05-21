@@ -12,6 +12,7 @@ $(document).ready(function() {
    $('#nav-mobile-open').click(openNav);
    $('#nav-mobile-close').click(closeNav);
 
+
    /* Keep distance */
 
    var navbar = document.getElementById("navbar");
