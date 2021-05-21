@@ -1,15 +1,10 @@
----
-title: Referenciák
-slug: referenciak
-class: privacy_page
----
 [center]
-#**Referenciák**
+#**Referenes**
 [/center]
 <hr style="border: 1px solid black;"/>
 [div class="animate__animated animate__fadeInUp"]
 [columns count=3 gap=120px]
-![Aptiv](Aptiv.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "Aptiv")
+![Aptiv](../04.referenciak/Aptiv.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "Aptiv")
 ![DHL](DHL.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "DHL")
 ![Gedia](Gedia.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "Gedia")
 ![Knaus](Knaus.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "KnausTabbert")

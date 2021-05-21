@@ -11,7 +11,7 @@ markdown:
     extra: true
 ---
 
-[owl-carousel items=1 margin=10 loop=true autoplayHoverPause=true nav=true]
+[owl-carousel items=1 margin=10 loop=true autoplay=true autoplayTimeout=5000 smartSpeed=1500 autoplayHoverPause=true nav=true]
 <div id="carousel" class="carousel-container" markdown=1>
   ![](picture1.jpg?cropZoom=1500,500)
   <div class="carousel-textblock">

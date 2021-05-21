@@ -12,6 +12,15 @@
 	color: #f47920 !important;
 }
 
+
+.owl-prev, .owl-next {
+	color: #f47920 !important;
+}
+
+.owl-dot.active span {
+	background: #f47920 !important;
+}
+
 /* SIDENAV */
 .sidenav {
   height: 100%;
@@ -128,7 +137,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-	background: rgba(0,0,0,1) !important; /*linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,0) 100%) !important;*/
+	background: rgba(0,0,0,.95) !important; /*linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,0) 100%) !important;*/
 	transition: all 1s ease;
 	color: white;
 }
@@ -177,7 +186,6 @@
 
 .sticky .navbar-button {
 	margin-top: 0;
-	margin-bottom: -4rem;
 	transition: all 1s ease;
 }
 
@@ -262,6 +270,9 @@
 		  padding: 1rem 2rem;
 				margin-right: -3.5rem !important;
 	}
+	.sticky .navbar-button {
+		margin-bottom: -5rem;
+	}
 }
 
 /* Nagy */
@@ -272,6 +283,9 @@
 		right: 2rem;
 		  padding: 2rem 4rem;
 			margin-right: 10rem;
+	}
+	.sticky .navbar-button {
+		margin-bottom: -4rem;
 	}
 }
 
@@ -555,8 +569,8 @@ h3 {
 	position: relative;
 	background: #253d7f;
 	color: #ffffff;
-	font-family: 'Georgia', serif;
-	font-size: 15px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 16px;
 	line-height: 22px;
 	font-weight: normal;
 	border-radius: 50px;
@@ -570,7 +584,7 @@ h3 {
 }
 .btn1:hover {
 	text-decoration: none;
-	background: #5c7acc;
+	background: #f47920;
 	color: #ffffff;
 	-webkit-transition: all 0.2s ease;
 	transition: all .2s ease-in-out;
@@ -886,7 +900,7 @@ header {
 	transition: all 0.2s ease;
 }
 .list1 li a p {
-	text-shadow: 1px 1px 2px #c1c1c1;
+	/*text-shadow: 1px 1px 2px #c1c1c1;*/
 	font-family: 'Georgia', serif;
 	font-size: 30px;
 	line-height: 32px;
@@ -903,6 +917,7 @@ header {
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 	transform: scale(1.1);
+	color: #f47920;
 }
 .box1 {
 	background: #253d7f;

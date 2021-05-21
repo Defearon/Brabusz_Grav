@@ -1,8 +1,3 @@
----
-title: Referenciák
-slug: referenciak
-class: privacy_page
----
 [center]
 #**Referenciák**
 [/center]

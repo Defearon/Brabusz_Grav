@@ -11,7 +11,7 @@ cache/*
 !cache/.*
 assets/*
 !assets/.*
-**/logs/
+logs/*.json
 logs/
 !logs/.*
 logs/**
