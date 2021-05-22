@@ -13,6 +13,5 @@ content:
             - _slider
             - _welcome
             - _categories
-            - _portfolio
-            - _footer
+            - _contact
 ---

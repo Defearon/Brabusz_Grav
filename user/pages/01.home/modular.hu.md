@@ -14,6 +14,5 @@ content:
             - _welcome
             - _categories
             - _references
-            - _portfolio
-            - _footer
+            - _contact
 ---

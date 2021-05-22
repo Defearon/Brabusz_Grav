@@ -1,12 +1,33 @@
 /*------- VAR -------*/
 :root{
-	--bgvar: url(../img/pattern2.jpg) 0 0 repeat;
+/*	--bgvar: url(../img/pattern2.jpg) 0 0 repeat;*/
 	--txtcolor: #474848;
 
 }
 
 /*------ SAJÁT ------*/
 
+.custom-footer {
+	/*background: #f47920 !important;*/
+	background: #f9f9f9 !important;
+}
+
+.full-width {
+	width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#footer-line {
+	background: rgb(37,33,113);
+	background: linear-gradient(180deg, rgba(37,33,113,1) 0%, rgba(37,61,127,1) 30%, rgba(37,61,127,1) 70%, rgba(37,33,113,1) 100%);
+	border: 4px solid #f47920;
+	height: 6rem;
+	z-index: 999;
+}
 
 .navbar-menu li a:hover {
 	color: #f47920 !important;
@@ -475,7 +496,8 @@ div.textwhite {
 body {
 	/*background: rgb(220,96,37);*/
 	/*background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
+	overflow-x: hidden;
 }
 /*----------- Back to top --------------*/
 #toTop {
@@ -503,27 +525,27 @@ body {
 	text-align: center;
 	padding: 30px 1.5rem;
 	/*background: rgb(220,96,37);
-	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
-	background: #f9f9f9;
+	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);
+	background: #f9f9f9;*/
 }
 .row_2 {
 	text-align: center;
 	padding: 22px 1.5rem 0;
 	/*background: rgb(220,96,37);
-	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);*/
-	background: #f9f9f9;
+	background: linear-gradient(90deg, rgba(220,96,37,1) 0%, rgba(174,87,60,1) 75%, rgba(37,61,127,1) 100%);
+	background: #f9f9f9;*/
 }
 .row_3 {
 	padding: 43px 1.5rem 13px;
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
 }
 .row_4 {
 	padding: 30px 1.5rem 81px;
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
 }
 .row_5 {
 	padding: 30px 1.5rem 98px;
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
 }
 .row_6 {
 	padding: 30px 1.5rem 72px;
