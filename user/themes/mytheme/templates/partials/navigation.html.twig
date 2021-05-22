@@ -1,6 +1,12 @@
 {% import 'macros/macros.html.twig' as macros %}
 
 
+{% if page.find('/modules/navbar') %}
+    {% set requesttxt = page.find('/modules/navbar').header.request %}
+{% else %}
+    {% set requesttxt = "Ajánlatkérés" %}
+{% endif %}
+
 <div class="inner">
 
   <div class="navbar-logo">
@@ -23,7 +29,7 @@
 
 
     <div class="navbar-button each">
-      <a href="/kapcsolat" class="ajanlat "><span>Ajánlatkérés!</span></a>
+      <a href="/kapcsolat" class="ajanlat "><span>{{requesttxt}}</span></a>
     </div>
 
     {% include 'partials/language-selector.html.twig' %}

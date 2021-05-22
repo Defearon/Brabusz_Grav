@@ -3,7 +3,7 @@
 [/center]
 <hr style="border: 1px solid black;"/>
 [div class="animate__animated animate__fadeInUp"]
-[columns count=3 gap=120px]
+[columns count=3 width=200px gap=30px]
 ![Aptiv](Aptiv.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "Aptiv")
 ![DHL](DHL.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "DHL")
 ![Gedia](Gedia.png?resize=300,300&classes=caption,caption-center,wobble-vertical-on-hover "Gedia")

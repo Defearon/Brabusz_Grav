@@ -109,13 +109,14 @@ $(window).load(function() {
         <div class="row_6">
             <div class="container">
                 <h2 class="pad_bot3">{{ page.header.title }}</h2>
+                {{ page.content|raw }}
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div id="options" class="clearfix">
                             <ul id="filters" class="pagination option-set clearfix" data-option-key="filter">
                                 <li><a href="#filter" data-option-value="*" class="selected">{{ page.header.showall }}</a></li>
                                 {% for item in page.header.filters %}
-                                    <li><a href="#filter" data-option-value=".{{ item.name }}">{{ item.name }}</a></li>
+                                    <li><a href="#filter" data-option-value=".{{ item.name }}">{{ item.name }} {{ item.description  }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
@@ -127,7 +128,7 @@ $(window).load(function() {
                                     </div>
                                 {% endfor %}
                             </div>
-                            {{ page.content|raw }}
+                            <!-- {{ page.content|raw }} -->
                         </div>
                     </div>
                 </div>

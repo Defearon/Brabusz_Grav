@@ -74,12 +74,21 @@
   .navbar-menu {
 		display: none !important;
 	}
+
+	.pagination {
+		display: grid !important;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
   #nav-mobile-open {
 		display: none !important;
 	}
+
+	.pagination {
+		display: inline-flex !important;
+	}
+
 }
 
 #nav-mobile-open {
@@ -273,6 +282,7 @@
 	.sticky .navbar-button {
 		margin-bottom: -5rem;
 	}
+
 }
 
 /* Nagy */
@@ -287,6 +297,7 @@
 	.sticky .navbar-button {
 		margin-bottom: -4rem;
 	}
+
 }
 
 .ajanlat > span {
@@ -1408,7 +1419,7 @@ hr.line2 {
 }
 .element span {
 	position: relative;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-family: 'Georgia', serif;
 	font-size: 12px;
 	line-height: 20px;
