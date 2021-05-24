@@ -7,6 +7,19 @@
 
 /*------ SAJÁT ------*/
 
+
+@media screen and (max-width: 600px) {
+	div .polaroid-img{
+		display: grid;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	div .polaroid-img{
+		display: inline-block;
+	}
+}
+
 .custom-footer {
 	/*background: #f47920 !important;*/
 	background: #f9f9f9 !important;
