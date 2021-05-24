@@ -41,7 +41,7 @@ forms:
             submit:
                 type: submit
                 value: Küldés
-                classes: btn btn-primary top-bottom-margin-10 
+                classes: btn btn-primary top-bottom-margin-10
             reset:
                 type: reset
                 value: Töröl

@@ -7,6 +7,9 @@
 
 /*------ SAJÁT ------*/
 
+.sc-columns {
+	text-align: center;
+}
 
 @media screen and (max-width: 600px) {
 	div .polaroid-img{
@@ -175,7 +178,6 @@
 }
 
 
-
 .sticky {
   position: fixed;
   top: 0;
@@ -183,6 +185,10 @@
 	background: rgba(0,0,0,.95) !important; /*linear-gradient(180deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,0) 100%) !important;*/
 	transition: all 1s ease;
 	color: white;
+}
+
+.sticky .logo img {
+	 /*filter: drop-shadow(0px 0px 2px white);*/
 }
 
 .sticky .navbar-menu li a {
@@ -487,6 +493,7 @@ textarea {
 
 div.maps {
 	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	 margin-bottom: 1.5rem;
 }
 
 iframe {
