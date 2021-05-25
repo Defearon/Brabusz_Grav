@@ -2,7 +2,7 @@
 markdown:
     extra: true
 ---
-<!-- Kék vonal -->
+<!-- Kék vonal
 <div class="full-width" id="footer-line"> </div>
 <!-- Tartalom -->
 <div class="inner" markdown=1>
