@@ -13,36 +13,40 @@ markdown:
 
 [owl-carousel items=1 margin=10 loop=true autoplay=true autoplayTimeout=5000 smartSpeed=1500 autoplayHoverPause=true nav=true]
 <div id="carousel" class="carousel-container" markdown=1>
-  ![](picture1.jpg?cropZoom=1500,500)
+  ![](c1.jpg?cropZoom=1500,500)
   <div class="carousel-textblock">
-    <h2>Say something</h2>
-    <p>Reginam occidere nolite timere bonum est si omnes consentiunt ego non contradico.</p>
-    <!--
-    <a href="#" class="btn btn-primary carousel-btn animate__animated animate__infinite animate__pulse ">Gomb</a>
-    -->
+  <h1>TEST</h1>
   </div>
 </div>
+
 <div class="carousel-container" markdown=1>
-  ![](picture2.jpg?cropZoom=1500,500)
-  <div class="carousel-textblock">
-    <h4>Short text here</h4>
-    <p>Beciegast nveriti vitaesaert asety kertya aset aplica boserde nerafae kertyuraue styasnemo faserani </p>
-  </div>
-</div>
-[/owl-carousel]
+  ![](c2.jpg?cropZoom=1500,500)
 
+</div>
 
-<!--
-[owl-carousel items=1 margin=10 ]
-<div class="mycarousel" style="background-image: url({{ page.media['picture1.jpg'].url }});">
-  <div class="carousel-textbox">
-    <h2>This is panel 1</h2>
-    <p>foo</p>
-  </div>
+<div class="carousel-container" markdown=1>
+  ![](c3.jpg?cropZoom=1500,500)
+
 </div>
-<div class="mycarousel" style="background: url({{ page.media['picture2.jpg'].url }});">
-  <h2>This is panel 2</h2>
-  <p>foo</p>
+
+<div class="carousel-container" markdown=1>
+  ![](c4.jpg?cropZoom=1500,500)
+
 </div>
+
+<div class="carousel-container" markdown=1>
+  ![](c5.jpg?cropZoom=1500,500)
+
+</div>
+
+<div class="carousel-container" markdown=1>
+  ![](c6.jpg?cropZoom=1500,500)
+
+</div>
+
+<div class="carousel-container" markdown=1>
+  ![](c7.jpg?cropZoom=1500,500)
+
+</div>
+
 [/owl-carousel]
--->

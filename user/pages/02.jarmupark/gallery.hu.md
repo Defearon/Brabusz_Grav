@@ -16,18 +16,53 @@ filters:
 gallery:
     -
         filter: Nagy
-        image: autobusz1.jpg
+        image: n1.jpg
         description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+    -
+        filter: Nagy
+        image: n2.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+    -
+        filter: Nagy
+        image: n3.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+
     -
         filter: Közepes
-        image: autobusz2.jpg
+        image: ko1.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+
+    -
+        filter: Kis
+        image: k1.jpg
         description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
     -
         filter: Kis
-        image: minibus1.jpg
+        image: k2.jpg
         description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
     -
         filter: Kis
-        image: minibus2.jpg
+        image: k3.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+    -
+        filter: Kis
+        image: k4.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+    -
+        filter: Kis
+        image: k5.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+
+    -
+        filter: Kis
+        image: k6.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+    -
+        filter: Kis
+        image: k7.jpg
+        description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
+    -
+        filter: Kis
+        image: k8.jpg
         description: 'Ilyen és olyan típusú ezzel és azzal felszerelt jármű...'
 ---

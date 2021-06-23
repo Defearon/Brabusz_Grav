@@ -16,18 +16,50 @@ filters:
 gallery:
     -
         filter: Coach
-        image: autobusz1.jpg
-        description: 'Some type of bus with this and that...'
+        image: n1.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Coach
+        image: n2.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Coach
+        image: n3.jpg
+        description: 'Some kind of bus with this and that...'
     -
         filter: Single-decker
-        image: autobusz2.jpg
-        description: 'Some type of bus with this and that...'
+        image: ko1.jpg
+        description: 'Some kind of bus with this and that...'
     -
         filter: Minibus
-        image: minibus1.jpg
-        description: 'Some type of bus with this and that...'
+        image: k1.jpg
+        description: 'Some kind of bus with this and that...'
     -
         filter: Minibus
-        image: minibus2.jpg
-        description: 'Some type of bus with this and that...'
+        image: k2.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Minibus
+        image: k3.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Minibus
+        image: k4.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Minibus
+        image: k5.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Minibus
+        image: k6.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Minibus
+        image: k7.jpg
+        description: 'Some kind of bus with this and that...'
+    -
+        filter: Minibus
+        image: k8.jpg
+        description: 'Some kind of bus with this and that...'
 ---
