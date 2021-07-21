@@ -120,16 +120,39 @@ $(window).load(function() {
                                 {% endfor %}
                             </ul>
                         </div>
+
+<!-- KÉP -->
+
                         <div class="containerExtra">
                             <div id="container" class="clearfix">
                                 {% for element in page.header.gallery  %}
                                     <div class="element transition {{ element.filter }}" data-category="transition">
-                                        <a href="{{ page.media[element.image].url }}" class="thumb"><figure class="img-polaroid">{{ page.media[element.image].resize(270, 190).html()|raw }}</figure></a><span class="description">{{ element.description }}</span>
+                                        <a href="{{ page.media[element.image].url }}" class="thumb">
+
+                                        <figure class="img-polaroid">
+                                          {{ page.media[element.image].resize(270, 190).html()|raw }}
+                                          <div class="vehicle-title">
+                                            {{ element.title }}
+                                          </div></a>
+
+
+                                          <div class="vehicle-capacity">
+                                            {{ element.capacity }}
+                                          </div>
+
+                                          <span class="vehicle-description">
+                                            {{ element.description }}
+                                          </span>
+                                        </figure>
+
+
                                     </div>
                                 {% endfor %}
                             </div>
                             <!-- {{ page.content|raw }} -->
                         </div>
+
+
                     </div>
                 </div>
             </div>

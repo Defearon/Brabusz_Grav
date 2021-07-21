@@ -7,6 +7,18 @@
 
 /*------ SAJÁT ------*/
 
+/*.vehicle-description, .vehicle-title, .vehicle-capacity {
+	position: relative;
+	display: block;
+}*/
+
+.vehicle-title {
+	background: #253d7f;
+	padding: .5rem;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3.5rem;
+}
 
 /* kicsi */
 @media only screen and (max-width: 1350px) {
@@ -1531,10 +1543,7 @@ hr.line2 {
 	padding: 0;
 	text-decoration: none;
 }
-.description {
-	position: relative;
-	display: block;
-}
+
 #filters {
 	position: relative;
 }

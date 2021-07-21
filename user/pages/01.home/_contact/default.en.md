@@ -2,10 +2,8 @@
 markdown:
     extra: true
 ---
-# **Contact**
-
-[center]
-<div markdown="1" class="title5">
+# **Contact**  
+<div markdown="1" class="title6">
 | | |
 |: ----------- |: ----------- |
 | **Office:** | 	2523 Sárisáp Május 1. sor 23., [+36 33 450 610](tel:+3633450610) |
@@ -17,5 +15,3 @@ markdown:
 | **Bank account number:** | 	58600434-11224677 |
 | | [www.brabusz.hu](/) |
 </div>
-</div>
-[/center]
