@@ -61,20 +61,21 @@ title: Contact
 ---
 
 ##Contact
-<div class="table table-striped table-responsive-lg table-hidden-border grid-table" markdown="1">
-<div markdown="1">
-![Logo](brabusz.png?resize=100,100)
-</div>
-<div markdown="1">
+[center]
+<div markdown="1" class="title5">
 | | |
-| ----------- | ----------- |
+|: ----------- |: ----------- |
 | **Office:** | 	2523 Sárisáp Május 1. sor 23., [+36 33 450 610](tel:+3633450610) |
+| **Establishment:** | 2529 Annavölgy hrsz. 1789. |
+| **Workshop:** | 2523 Sárisáp Fő út 51.|
 | **Mailing address:** | 2523 Sárisáp Május 1. sor 23.,  [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com) |
-| **0-24 duty** | [+36 30 316 9048,   ](tel:+36303169048) [+36 30 339 2925 48](tel:+36303169048)|
+| **Stationary aid** | [+36 30 316 9048,   ](tel:+36303169048) [+36 30 339 2925](tel:+36303392925)|
 | **Tax number:** | 	65984725-2-31 |
 | **Bank account number:** | 	58600434-11224677 |
 | | [www.brabusz.hu](/) |
 </div>
 </div>
+[/center]
+
 
 <div class="maps" style="width: 100%"><iframe class="embed-responsive-item" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=S%C3%A1ris%C3%A1p,%20M%C3%A1jus%201.%20sor%2023,%202523+(Brabusz)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
