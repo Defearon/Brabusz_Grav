@@ -1,16 +1,16 @@
 ---
 categories:
-    - image: 1dolgozo.jpg
+    - image: munkasszallitas.jpg
       class: box1
       title: Worker's transport
       title_position: bottom
       href: \szolgaltatasaink
-    - image: 2szemely.jpg
+    - image: kulonjarat.jpg
       class: box1
       title: Private transport
       title_position: bottom
       href: \szolgaltatasaink
-    - image: 3jarmupark.jpg
+    - image: munkasszallitas.jpg
       class: box1
       title: Vehicles
       title_position: bottom

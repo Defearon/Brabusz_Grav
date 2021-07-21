@@ -5,7 +5,7 @@ markdown:
 # **Kapcsolat**
 
 [center]
-<div markdown="1" class="title5">
+<div markdown="1" class="title5"">
 | | |
 |: ----------- |: ----------- |
 | **Iroda:** | 	2523 Sárisáp Május 1. sor 23., [+36 33 450 610](tel:+3633450610) |

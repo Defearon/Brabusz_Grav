@@ -7,6 +7,28 @@
 
 /*------ SAJÁT ------*/
 
+
+/* kicsi */
+@media only screen and (max-width: 1350px) {
+	.column-wrapper {
+		text-align: center;
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 20px;
+	}
+}
+
+/* nagy */
+@media only screen and (min-width: 1350px) {
+	.column-wrapper {
+		text-align: center;
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  gap: 20px;
+	}
+}
+
+
 .sc-columns {
 	text-align: center;
 }
@@ -28,11 +50,16 @@ grid-template-columns: 0.3fr 1.7fr;
     ". .";
 }
 
-.sc-columns:after {
+/*.sc-columns:after {
   content: "";
   display: table;
   clear: both;
 }
+.sc-columns:before {
+  content: "";
+  display: table;
+  clear: both;
+}*/
 
 @media screen and (max-width: 600px) {
 	div .polaroid-img{

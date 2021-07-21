@@ -1,16 +1,16 @@
 ---
 categories:
-    - image: 1dolgozo.jpg
+    - image: munkasszallitas.jpg
       class: box1
-      title: Dolgozószállítás
+      title: Munkásszállítás
       title_position: bottom
       href: \szolgaltatasaink
-    - image: 2szemely.jpg
+    - image: kulonjarat.jpg
       class: box1
-      title: Személyszállítás
+      title: Különjárat
       title_position: bottom
       href: \szolgaltatasaink
-    - image: 3jarmupark.jpg
+    - image: jarmupark.jpg
       class: box1
       title: Járműpark
       title_position: bottom

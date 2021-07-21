@@ -74,7 +74,7 @@ title: Contact
 | **Bank account number:** | 	58600434-11224677 |
 | | [www.brabusz.hu](/) |
 </div>
-</div>
+
 [/center]
 
 
