@@ -20,6 +20,7 @@
 	display: block;
 	color: #222;
 	width: 50%;
+	margin-top: 15px;
 }
 .vehicle-button:hover {
 		color: white;

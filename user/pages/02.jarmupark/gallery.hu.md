@@ -3,6 +3,7 @@ title: Járműpark
 menu: Járműpark
 onpage_menu: true
 showall: Mind
+button: 'Galéria'
 filters:
     -
         value: '1'

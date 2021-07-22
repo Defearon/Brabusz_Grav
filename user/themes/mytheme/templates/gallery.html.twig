@@ -127,12 +127,14 @@ $(window).load(function() {
                           <div id="container" class="clearfix">
                             {% for child in page.children %}
                                 <div class="element transition {{ child.header.filter }}" data-category="transition">
-                                  <a href="{{ child.media[child.header.image].url }}" class="thumb">
+
                                     <figure class="img-polaroid">
+                                    <a href="{{ child.media[child.header.image].url }}" class="thumb">
                                       {{ child.media[child.header.image]|raw }}
                                         <div class="vehicle-title">
                                           {{ child.header.title }}
-                                        </div></a>
+                                        </div>
+                                      </a>
 
 
                                         <div class="vehicle-capacity">
@@ -146,7 +148,7 @@ $(window).load(function() {
                                       {% if child.header.button %}
                                         <br/>
                                         <a href="{{ child.url }}" class="btn vehicle-button">
-                                          {{ child.header.button }}
+                                          {{ page.header.button }}
                                         </a>
                                       {% endif %}
 
@@ -156,42 +158,6 @@ $(window).load(function() {
                         </div>
                        {{ page.content|raw }}
                     </div>
-
-<!-- KÉP
-
-
-
-                        <div class="containerExtra">
-                            <div id="container" class="clearfix">
-                                {% for element in page.header.gallery  %}
-                                    <div class="element transition {{ element.filter }}" data-category="transition">
-                                        <a href="{{ page.media[element.image].url }}" class="thumb">
-
-                                        <figure class="img-polaroid">
-
-                                          {{ page.media[element.image]|raw }}
-
-                                          <div class="vehicle-title">
-                                            {{ element.title }}
-                                          </div></a>
-
-
-                                          <div class="vehicle-capacity">
-                                            {{ element.capacity }}
-                                          </div>
-
-                                          <span class="vehicle-description">
-                                            {{ element.description }}
-                                          </span>
-                                        </figure>
-
-
-                                    </div>
-                                {% endfor %}
-                            </div>
-                           {{ page.content|raw }}
-                        </div>
--->
 
                     </div>
                 </div>

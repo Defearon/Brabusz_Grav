@@ -3,6 +3,7 @@ title: Vehicles
 menu: Vehicles
 onpage_menu: true
 showall: Show all
+button: 'Gallery'
 filters:
     -
         value: '1'
