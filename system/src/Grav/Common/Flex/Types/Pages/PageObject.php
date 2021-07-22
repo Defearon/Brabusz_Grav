@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * @package    Grav\Common\Flex
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -22,10 +22,10 @@ use Grav\Common\Flex\Types\Pages\Traits\PageTranslateTrait;
 use Grav\Common\Language\Language;
 use Grav\Common\Page\Interfaces\PageInterface;
 use Grav\Common\Page\Pages;
+use Grav\Common\User\Interfaces\UserInterface;
 use Grav\Common\Utils;
 use Grav\Framework\Filesystem\Filesystem;
 use Grav\Framework\Flex\FlexObject;
-use Grav\Framework\Flex\Interfaces\FlexCollectionInterface;
 use Grav\Framework\Flex\Interfaces\FlexObjectInterface;
 use Grav\Framework\Flex\Pages\FlexPageObject;
 use Grav\Framework\Route\Route;
@@ -35,7 +35,6 @@ use RocketTheme\Toolbox\Event\Event;
 use RuntimeException;
 use stdClass;
 use function array_key_exists;
-use function assert;
 use function count;
 use function func_get_args;
 use function in_array;
@@ -64,7 +63,6 @@ class PageObject extends FlexPageObject
 
     /** @var string Language code, eg: 'en' */
     protected $language;
-
     /** @var string File format, eg. 'md' */
     protected $format;
 
@@ -80,6 +78,7 @@ class PageObject extends FlexPageObject
             'path' => true,
             'full_order' => true,
             'filterBy' => true,
+            'translated' => false,
         ] + parent::getCachedMethods();
     }
 
@@ -92,6 +91,11 @@ class PageObject extends FlexPageObject
             Grav::instance()->fireEvent('onPageProcessed', new Event(['page' => $this]));
             $this->_initialized = true;
         }
+    }
+
+    public function translated(): bool
+    {
+        return $this->translatedLanguages(true) ? true : false;
     }
 
     /**
@@ -200,10 +204,7 @@ class PageObject extends FlexPageObject
             }
 
             // Make sure page isn't being moved under itself.
-            $key = $this->getKey();
-            if ($key === $parentKey || strpos($parentKey, $key . '/') === 0) {
-                throw new RuntimeException(sprintf('Page /%s cannot be moved to %s', $key, $parentRoute));
-            }
+            $key = $this->getStorageKey();
 
             /** @var PageObject|null $parent */
             $parent = $parentKey !== false ? $this->getFlexDirectory()->getObject($parentKey, 'storage_key') : null;
@@ -225,7 +226,7 @@ class PageObject extends FlexPageObject
         }
 
         // Reorder siblings.
-        $siblings = is_array($reorder) ? $this->reorderSiblings($reorder) : [];
+        $siblings = is_array($reorder) ? ($this->reorderSiblings($reorder) ?? []) : [];
 
         $data = $this->prepareStorage();
         unset($data['header']);
@@ -262,6 +263,24 @@ class PageObject extends FlexPageObject
     }
 
     /**
+     * @param UserInterface|null $user
+     */
+    public function check(UserInterface $user = null): void
+    {
+        parent::check($user);
+
+        if ($user && $this->isMoved()) {
+            $parentKey = $this->getProperty('parent_key');
+
+            /** @var PageObject|null $parent */
+            $parent = $this->getFlexDirectory()->getObject($parentKey, 'storage_key');
+            if (!$parent || !$parent->isAuthorized('create', null, $user)) {
+                throw new \RuntimeException('Forbidden', 403);
+            }
+        }
+    }
+
+    /**
      * @param array|bool $reorder
      * @return FlexObject|FlexObjectInterface
      */
@@ -291,7 +310,26 @@ class PageObject extends FlexPageObject
             $grav->fireEvent('onAdminAfterSave', new Event(['type' => 'flex', 'directory' => $this->getFlexDirectory(), 'object' => $this]));
         }
 
+        // Reset original after save events have all been called.
+        $this->_original = null;
+
         return $instance;
+    }
+
+    /**
+     * @return PageObject
+     */
+    public function delete()
+    {
+        $result = parent::delete();
+
+        // Backwards compatibility with older plugins.
+        $fireEvents = $this->isAdminSite() && $this->getFlexDirectory()->getConfig('object.compat.events', true);
+        if ($fireEvents) {
+            $this->getContainer()->fireEvent('onAdminAfterDelete', new Event(['object' => $this]));
+        }
+
+        return $result;
     }
 
     /**
@@ -310,33 +348,86 @@ class PageObject extends FlexPageObject
 
         $this->_reorder = [];
         $this->setProperty('parent_key', $parent->getStorageKey());
+        $this->storeOriginal();
 
         return $this;
     }
 
     /**
-     * @param array $ordering
-     * @return PageCollection
+     * @param UserInterface $user
+     * @param string $action
+     * @param string $scope
+     * @param bool $isMe
+     * @return bool|null
      */
-    protected function reorderSiblings(array $ordering)
+    protected function isAuthorizedOverride(UserInterface $user, string $action, string $scope, bool $isMe): ?bool
+    {
+        // Special case: creating a new page means checking parent for its permissions.
+        if ($action === 'create' && !$this->exists()) {
+            $parent = $this->parent();
+            if ($parent && method_exists($parent, 'isAuthorized')) {
+                return $parent->isAuthorized($action, $scope, $user);
+            }
+
+            return false;
+        }
+
+        return parent::isAuthorizedOverride($user, $action, $scope, $isMe);
+    }
+
+    /**
+     * @return bool
+     */
+    protected function isMoved(): bool
     {
         $storageKey = $this->getMasterKey();
         $filesystem = Filesystem::getInstance(false);
         $oldParentKey = ltrim($filesystem->dirname("/{$storageKey}"), '/');
         $newParentKey = $this->getProperty('parent_key');
-        $isMoved = $oldParentKey !== $newParentKey;
+
+        return $this->exists() && $oldParentKey !== $newParentKey;
+    }
+
+    /**
+     * @param array $ordering
+     * @return PageCollection|null
+     */
+    protected function reorderSiblings(array $ordering)
+    {
+        $storageKey = $this->getMasterKey();
+        $isMoved = $this->isMoved();
         $order = !$isMoved ? $this->order() : false;
+        if ($order !== false) {
+            $order = (int)$order;
+        }
 
         $parent = $this->parent();
         if (!$parent) {
             throw new RuntimeException('Cannot reorder a page which has no parent');
         }
 
-        /** @var PageCollection|null $siblings */
+        /** @var PageCollection $siblings */
         $siblings = $parent->children();
+        $siblings = $siblings->getCollection()->withOrdered();
 
-        /** @var PageCollection|null $siblings */
-        $siblings = $siblings->getCollection()->withOrdered()->orderBy(['order' => 'ASC']);
+        // Handle special case where ordering isn't given.
+        if ($ordering === []) {
+            if ($order >= 999999) {
+                // Set ordering to point to be the last item, ignoring the object itself.
+                $order = 0;
+                foreach ($siblings as $sibling) {
+                    if ($sibling->getKey() !== $this->getKey()) {
+                        $order = max($order, (int)$sibling->order());
+                    }
+                }
+                $this->order($order + 1);
+            }
+
+            // Do not change sibling ordering.
+            return null;
+        }
+
+        $siblings = $siblings->orderBy(['order' => 'ASC']);
 
         if ($storageKey !== null) {
             if ($order !== false) {
@@ -380,7 +471,9 @@ class PageObject extends FlexPageObject
                     throw new RuntimeException("New parent page '{$parentKey}' not found.");
                 }
             }
-            $newSiblings = $newParent->children()->getCollection()->withOrdered();
+            /** @var PageCollection $newSiblings */
+            $newSiblings = $newParent->children();
+            $newSiblings = $newSiblings->getCollection()->withOrdered();
             $order = 0;
             foreach ($newSiblings as $sibling) {
                 $order = max($order, (int)$sibling->order());
@@ -437,6 +530,8 @@ class PageObject extends FlexPageObject
         if ($isNew === true && $name === '') {
             // Support onBlueprintCreated event just like in Pages::blueprints($template)
             $blueprint->set('initialized', true);
+            $blueprint->setFilename($template);
+
             Grav::instance()->fireEvent('onBlueprintCreated', new Event(['blueprint' => $blueprint, 'type' => $template]));
         }
 
@@ -586,14 +681,17 @@ class PageObject extends FlexPageObject
             unset($elements['ordering'], $elements['order']);
         } elseif (array_key_exists('ordering', $elements) && array_key_exists('order', $elements)) {
             // Store ordering.
-            $this->_reorder = !empty($elements['order']) ? explode(',', $elements['order']) : [];
+            $ordering = $elements['order'] ?? null;
+            $this->_reorder = !empty($ordering) ? explode(',', $ordering) : [];
 
             $order = false;
             if ((bool)($elements['ordering'] ?? false)) {
-                $order = 999999;
+                $order = $this->order();
+                if ($order === false) {
+                    $order = 999999;
+                }
             }
 
-            $this->order();
             $elements['order'] = $order;
         }
 

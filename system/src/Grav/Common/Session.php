@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -128,12 +128,12 @@ class Session extends \Grav\Framework\Session\Session
                 /** @var Uri $uri */
                 $uri = $grav['uri'];
                 /** @var Forms|null $form */
-                $form = $grav['forms']->getActiveForm();
+                $form = $grav['forms']->getActiveForm(); // @phpstan-ignore-line
 
                 $sessionField = base64_encode($uri->url);
 
                 /** @var FormFlash|null $flash */
-                $flash = $form ? $form->getFlash() : null;
+                $flash = $form ? $form->getFlash() : null; // @phpstan-ignore-line
                 $object = $flash && method_exists($flash, 'getLegacyFiles') ? [$sessionField => $flash->getLegacyFiles()] : null;
             }
         }

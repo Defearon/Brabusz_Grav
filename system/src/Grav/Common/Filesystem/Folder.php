@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Filesystem
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -371,6 +371,10 @@ abstract class Folder
             return;
         }
 
+        if (strpos($target, $source) === 0) {
+            throw new RuntimeException('Cannot move folder to itself');
+        }
+
         if (file_exists($target)) {
             // Rename fails if target folder exists.
             throw new RuntimeException('Cannot move files to existing folder/file.');
@@ -383,11 +387,7 @@ abstract class Folder
         @rename($source, $target);
 
         // Rename function can fail while still succeeding, so let's check if the folder exists.
-        if (!file_exists($target) || !is_dir($target)) {
-            // In some rare cases rename() creates file, not a folder. Get rid of it.
-            if (file_exists($target)) {
-                @unlink($target);
-            }
+        if (is_dir($source)) {
             // Rename doesn't support moving folders across filesystems. Use copy instead.
             self::copy($source, $target);
             self::delete($source);

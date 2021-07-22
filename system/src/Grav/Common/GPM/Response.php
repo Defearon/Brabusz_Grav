@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\GPM
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -53,7 +53,7 @@ class Response
         // check if this function is available, if so use it to stop any timeouts
         try {
             if (Utils::functionExists('set_time_limit')) {
-                set_time_limit(0);
+                @set_time_limit(0);
             }
         } catch (Exception $e) {
         }

@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Installer
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -232,7 +232,7 @@ ERR;
 
         $this->location = dirname($location, 4);
 
-        $versions = Versions::instance(GRAV_ROOT . '/user/config/versions.yaml');
+        $versions = Versions::instance(USER_DIR . 'config/versions.yaml');
         $this->updater = new VersionUpdater('core/grav', __DIR__ . '/updates', $this->getVersion(), $versions);
 
         $this->updater->preflight();
@@ -280,7 +280,7 @@ ERR;
     {
         // Finalize can be run without installing Grav first.
         if (!$this->updater) {
-            $versions = Versions::instance(GRAV_ROOT . '/user/config/versions.yaml');
+            $versions = Versions::instance(USER_DIR . 'config/versions.yaml');
             $this->updater = new VersionUpdater('core/grav', __DIR__ . '/updates', GRAV_VERSION, $versions);
             $this->updater->install();
         }

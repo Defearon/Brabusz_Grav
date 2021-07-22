@@ -1,0 +1,55 @@
+title: Galéria
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        gallery:
+          type: tab
+          title: Galéria
+
+          fields:
+            header.title:
+              label: 'Jármű megnevezése'
+              type: text
+
+            header.filter:
+              type: select
+              label: Méret
+              default: Nagy
+              options:
+                1: Nagy
+                2: Közepes
+                3: Kicsi
+            header.capacity:
+              label: 'Férőhelyek'
+              type: text
+
+            header.image:
+              label: 'Jármű képe'
+              type: file
+              destination: 'self@'
+              multiple: false
+              accept:
+                - image/*
+
+            header.description:
+              label: 'Leírás'
+              type: text
+              
+            header.button:
+              label: 'Gomb szövege'
+              type: text
+
+            header.gallery:
+              label: 'Galéria képei'
+              destination: 'self@'
+              multiple: true
+              accept:
+                - image/*

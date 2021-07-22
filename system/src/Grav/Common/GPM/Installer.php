@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\GPM
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -135,7 +135,10 @@ class Installer
         }
 
         if (!$options['sophisticated']) {
-            if ($options['theme']) {
+            $isTheme = $options['theme'] ?? false;
+            // Make sure that themes are always being copied, even if option was not set!
+            $isTheme = $isTheme || preg_match('|/themes/[^/]+|ui', $install_path);
+            if ($isTheme) {
                 self::copyInstall($extracted, $install_path);
             } else {
                 self::moveInstall($extracted, $install_path);

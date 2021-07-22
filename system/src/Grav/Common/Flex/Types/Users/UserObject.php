@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * @package    Grav\Common\Flex
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -14,6 +14,7 @@ namespace Grav\Common\Flex\Types\Users;
 use Countable;
 use Grav\Common\Config\Config;
 use Grav\Common\Data\Blueprint;
+use Grav\Common\Flex\FlexObject;
 use Grav\Common\Flex\Traits\FlexGravTrait;
 use Grav\Common\Flex\Traits\FlexObjectTrait;
 use Grav\Common\Flex\Types\Users\Traits\UserObjectLegacyTrait;
@@ -21,7 +22,6 @@ use Grav\Common\Grav;
 use Grav\Common\Media\Interfaces\MediaCollectionInterface;
 use Grav\Common\Media\Interfaces\MediaUploadInterface;
 use Grav\Common\Page\Media;
-use Grav\Common\Page\Medium\Medium;
 use Grav\Common\Page\Medium\MediumFactory;
 use Grav\Common\User\Access;
 use Grav\Common\User\Authentication;
@@ -33,7 +33,6 @@ use Grav\Framework\File\Formatter\JsonFormatter;
 use Grav\Framework\File\Formatter\YamlFormatter;
 use Grav\Framework\Flex\Flex;
 use Grav\Framework\Flex\FlexDirectory;
-use Grav\Framework\Flex\FlexObject;
 use Grav\Framework\Flex\Storage\FileStorage;
 use Grav\Framework\Flex\Traits\FlexMediaTrait;
 use Grav\Framework\Form\FormFlashFile;
@@ -42,7 +41,6 @@ use RocketTheme\Toolbox\Event\Event;
 use RocketTheme\Toolbox\File\FileInterface;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
 use RuntimeException;
-use function assert;
 use function is_array;
 use function is_bool;
 use function is_object;
@@ -79,16 +77,12 @@ class UserObject extends FlexObject implements UserInterface, Countable
 
     /** @var array|null */
     protected $_uploads_original;
-
     /** @var FileInterface|null */
     protected $_storage;
-
     /** @var UserGroupIndex */
     protected $_groups;
-
     /** @var Access */
     protected $_access;
-
     /** @var array|null */
     protected $access;
 
@@ -121,11 +115,22 @@ class UserObject extends FlexObject implements UserInterface, Countable
         // User can only be authenticated via login.
         unset($elements['authenticated'], $elements['authorized']);
 
-        parent::__construct($elements, $key, $directory, $validate);
+        // Define username if it's not set.
+        if (!isset($elements['username'])) {
+            $storageKey = $elements['__META']['storage_key'] ?? null;
+            if (null !== $storageKey && $key === $directory->getStorage()->normalizeKey($storageKey)) {
+                $elements['username'] = $storageKey;
+            } else {
+                $elements['username'] = $key;
+            }
+        }
 
-        // Define username and state if they aren't set.
-        $this->defProperty('username', $key);
-        $this->defProperty('state', 'enabled');
+        // Define state if it isn't set.
+        if (!isset($elements['state'])) {
+            $elements['state'] = 'enabled';
+        }
+
+        parent::__construct($elements, $key, $directory, $validate);
     }
 
     /**
@@ -271,32 +276,6 @@ class UserObject extends FlexObject implements UserInterface, Countable
     }
 
     /**
-     * Get value from a page variable (used mostly for creating edit forms).
-     *
-     * @param string $name Variable name.
-     * @param mixed $default
-     * @param string|null $separator
-     * @return mixed
-     */
-    public function getFormValue(string $name, $default = null, string $separator = null)
-    {
-        $value = parent::getFormValue($name, null, $separator);
-
-        $settings = $this->getFieldSettings($name);
-        if ($settings['media_field'] ?? false === true) {
-            return $this->parseFileProperty($value);
-        }
-
-        if (null === $value) {
-            if ($name === 'media_order') {
-                return implode(',', $this->getMediaOrder());
-            }
-        }
-
-        return $value ?? $default;
-    }
-
-    /**
      * @param string $property
      * @param mixed $default
      * @return mixed
@@ -306,7 +285,8 @@ class UserObject extends FlexObject implements UserInterface, Countable
         $value = parent::getProperty($property, $default);
 
         if ($property === 'avatar') {
-            $value = $this->parseFileProperty($value);
+            $settings = $this->getMediaFieldSettings($property);
+            $value = $this->parseFileProperty($value, $settings);
         }
 
         return $value;
@@ -320,7 +300,9 @@ class UserObject extends FlexObject implements UserInterface, Countable
     public function toArray()
     {
         $array = $this->jsonSerialize();
-        $array['avatar'] = $this->parseFileProperty($array['avatar'] ?? null);
+
+        $settings = $this->getMediaFieldSettings('avatar');
+        $array['avatar'] = $this->parseFileProperty($array['avatar'] ?? null, $settings);
 
         return $array;
     }
@@ -536,7 +518,7 @@ class UserObject extends FlexObject implements UserInterface, Countable
     }
 
     /**
-     * Save user without the username
+     * Save user
      *
      * @return static
      */
@@ -551,13 +533,18 @@ class UserObject extends FlexObject implements UserInterface, Countable
             }
         }
 
-        $password = $this->getProperty('password');
-        if (null !== $password) {
-            $this->unsetProperty('password');
-            $this->unsetProperty('password1');
-            $this->unsetProperty('password2');
+        $password = $this->getProperty('password') ?? $this->getProperty('password1');
+        if (null !== $password && '' !== $password) {
+            $password2 = $this->getProperty('password2');
+            if (!\is_string($password) || ($password2 && $password !== $password2)) {
+                throw new \RuntimeException('Passwords did not match.');
+            }
+
             $this->setProperty('hashed_password', Authentication::create($password));
         }
+        $this->unsetProperty('password');
+        $this->unsetProperty('password1');
+        $this->unsetProperty('password2');
 
         // Backwards compatibility with older plugins.
         $fireEvents = $this->isAdminSite() && $this->getFlexDirectory()->getConfig('object.compat.events', true);
@@ -709,6 +696,9 @@ class UserObject extends FlexObject implements UserInterface, Countable
         $locator = Grav::instance()['locator'];
 
         $media = $this->getMedia();
+        if (!$media instanceof MediaUploadInterface) {
+            return;
+        }
 
         $list = [];
         $list_original = [];
@@ -720,7 +710,6 @@ class UserObject extends FlexObject implements UserInterface, Countable
 
             // Load settings for the field.
             $settings = $this->getMediaFieldSettings($field);
-
             foreach ($group as $filename => $file) {
                 if ($file) {
                     // File upload.
@@ -736,7 +725,7 @@ class UserObject extends FlexObject implements UserInterface, Countable
 
                 if ($file) {
                     // Check file upload against media limits.
-                    $filename = $media->checkUploadedFile($file, $filename, $settings);
+                    $filename = $media->checkUploadedFile($file, $filename, ['filesize' => 0] + $settings);
                 }
 
                 $self = $settings['self'];
@@ -771,6 +760,8 @@ class UserObject extends FlexObject implements UserInterface, Countable
                 }
             }
         }
+
+        $this->clearMediaCache();
 
         $this->_uploads = $list;
         $this->_uploads_original = $list_original;
@@ -822,45 +813,6 @@ class UserObject extends FlexObject implements UserInterface, Countable
 
         $this->setUpdatedMedia([]);
         $this->clearMediaCache();
-    }
-
-    /**
-     * @param array|mixed $value
-     * @return array|mixed
-     */
-    protected function parseFileProperty($value)
-    {
-        if (!is_array($value)) {
-            return $value;
-        }
-
-        $originalMedia = $this->getOriginalMedia();
-        $resizedMedia = $this->getMedia();
-
-        $list = [];
-        foreach ($value as $filename => $info) {
-            if (!is_array($info)) {
-                continue;
-            }
-
-            /** @var Medium|null $thumbFile */
-            $thumbFile = $resizedMedia[$filename];
-            /** @var Medium|null $imageFile */
-            $imageFile = $originalMedia[$filename] ?? $thumbFile;
-            if ($thumbFile && $imageFile) {
-                $list[$filename] = [
-                    'name' => $info['name'] ?? null,
-                    'type' => $info['type'] ?? null,
-                    'size' => $info['size'] ?? null,
-                    'path' => $info['path'] ?? null,
-                    'image_url' => $imageFile->url(),
-                    'thumb_url' =>  $thumbFile->url(),
-                    'cropData' => (object)($imageFile->metadata()['upload']['crop'] ?? [])
-                ];
-            }
-        }
-
-        return $list;
     }
 
     /**

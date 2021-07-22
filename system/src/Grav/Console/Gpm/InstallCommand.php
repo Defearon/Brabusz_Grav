@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Console\Gpm
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -600,7 +600,13 @@ class InstallCommand extends GpmCommand
         try {
             $output = Response::get($package->zipball_url . $query, [], [$this, 'progress']);
         } catch (Exception $e) {
-            $error = str_replace("\n", "\n  |  '- ", $e->getMessage());
+            if (!empty($package->premium) && $e->getCode() === 401) {
+                $message = '<yellow>Unauthorized Premium License Key</yellow>';
+            } else {
+                $message = $e->getMessage();
+            }
+
+            $error = str_replace("\n", "\n  |  '- ", $message);
             $io->write("\x0D");
             // extra white spaces to clear out the buffer properly
             $io->writeln('  |- Downloading package...    <red>error</red>                             ');

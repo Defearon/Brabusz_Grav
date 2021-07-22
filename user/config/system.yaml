@@ -19,7 +19,7 @@ languages:
     - hu
     - en
     - de
-  default_lang: null
+  default_lang: hu
   include_default_lang: true
   include_default_lang_file_extension: true
   translations: true
@@ -81,9 +81,9 @@ pages:
   last_modified: false
   etag: true
   vary_accept_encoding: false
-  redirect_default_route: false
   redirect_default_code: '302'
-  redirect_trailing_slash: true
+  redirect_trailing_slash: 302
+  redirect_default_route: 0
   ignore_files:
     - .DS_Store
   ignore_folders:
@@ -113,9 +113,10 @@ cache:
   allow_webserver_gzip: false
   redis:
     socket: '0'
+    password: null
+    database: null
     server: null
     port: null
-    password: null
   memcache:
     server: null
     port: null
@@ -129,6 +130,8 @@ twig:
   autoescape: true
   undefined_functions: true
   undefined_filters: true
+  safe_functions: {  }
+  safe_filters: {  }
   umask_fix: false
 assets:
   css_pipeline: false
@@ -142,6 +145,7 @@ assets:
   js_pipeline_before_excludes: true
   js_minify: true
   enable_asset_timestamp: false
+  enable_asset_sri: false
   collections:
     jquery: 'system://assets/jquery/jquery-2.x.min.js'
 errors:
@@ -165,6 +169,10 @@ images:
   debug: false
   auto_fix_orientation: true
   seofriendly: false
+  cls:
+    auto_sizes: false
+    aspect_ratio: false
+    retina_scale: '1'
   defaults:
     loading: auto
 media:
@@ -172,7 +180,7 @@ media:
   unsupported_inline_types: null
   allowed_fallback_types: null
   auto_metadata_exif: false
-  upload_limit: 0
+  upload_limit: 2147483648
 session:
   enabled: true
   initialize: true
@@ -183,6 +191,7 @@ session:
   httponly: true
   samesite: Lax
   split: true
+  domain: null
   path: null
 gpm:
   releases: stable

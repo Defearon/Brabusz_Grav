@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * @package    Grav\Framework\Flex
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -21,9 +21,8 @@ use Grav\Framework\Flex\FlexDirectory;
  *
  * @used-by \Grav\Framework\Flex\FlexIndex
  * @since 1.6
- * @template TKey
  * @template T
- * @extends FlexCollectionInterface<TKey,T>
+ * @extends FlexCollectionInterface<T>
  */
 interface FlexIndexInterface extends FlexCollectionInterface
 {

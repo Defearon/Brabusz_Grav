@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Framework\Flex
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -46,9 +46,8 @@ use function is_callable;
  * Class FlexDirectory
  * @package Grav\Framework\Flex
  * @template T
- * @template TKey
  */
-class FlexDirectory implements FlexDirectoryInterface, FlexAuthorizeInterface
+class FlexDirectory implements FlexDirectoryInterface
 {
     use FlexAuthorizeTrait;
 
@@ -236,7 +235,17 @@ class FlexDirectory implements FlexDirectoryInterface, FlexAuthorizeInterface
 
         /** @var UniformResourceLocator $locator */
         $locator = $grav['locator'];
-        $filename = $locator->findResource($this->getDirectoryConfigUri($name), true);
+        $uri = $this->getDirectoryConfigUri($name);
+
+        // If configuration is found in main configuration, use it.
+        if (str_starts_with($uri, 'config://')) {
+            $path = strtr(substr($uri, 9,  -5), '/', '.');
+
+            return $grav['config']->get($path);
+        }
+
+        // Load the configuration file.
+        $filename = $locator->findResource($uri, true);
         if ($filename === false) {
             return [];
         }
@@ -309,7 +318,7 @@ class FlexDirectory implements FlexDirectoryInterface, FlexAuthorizeInterface
      * @param array|null $keys  Array of keys.
      * @param string|null $keyField  Field to be used as the key.
      * @return FlexCollectionInterface
-     * @phpstan-return FlexCollectionInterface<TKey,T>
+     * @phpstan-return FlexCollectionInterface<T>
      */
     public function getCollection(array $keys = null, string $keyField = null): FlexCollectionInterface
     {

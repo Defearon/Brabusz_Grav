@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Data
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -294,13 +294,14 @@ class Blueprint extends BlueprintForm
      * Flatten data by using blueprints.
      *
      * @param  array $data
+     * @param  bool $includeAll
      * @return array
      */
-    public function flattenData(array $data)
+    public function flattenData(array $data, bool $includeAll = false)
     {
         $this->initInternals();
 
-        return $this->blueprintSchema->flattenData($data);
+        return $this->blueprintSchema->flattenData($data, $includeAll);
     }
 
 
@@ -523,8 +524,12 @@ class Blueprint extends BlueprintForm
      * @param string $op
      * @return bool
      */
-    protected function resolveActions(UserInterface $user, array $actions, string $op = 'and')
+    protected function resolveActions(?UserInterface $user, array $actions, string $op = 'and')
     {
+        if (null === $user) {
+            return false;
+        }
+
         $c = $i = count($actions);
         foreach ($actions as $key => $action) {
             if (!is_int($key) && is_array($actions)) {

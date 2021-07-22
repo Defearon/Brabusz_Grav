@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Assets\Traits
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -90,7 +90,7 @@ trait AssetUtilsTrait
                 }
 
                 $relative_dir = dirname($relative_path);
-                $link = ROOT_DIR . $relative_path;
+                $link = GRAV_ROOT . '/' . $relative_path;
             }
 
             // TODO: looks like this is not being used.
@@ -156,6 +156,10 @@ trait AssetUtilsTrait
         $no_key = ['loading'];
 
         foreach ($this->attributes as $key => $value) {
+            if ($value === null) {
+                continue;
+            }
+
             if (is_numeric($key)) {
                 $key = $value;
             }

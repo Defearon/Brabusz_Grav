@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -21,6 +21,7 @@ use RocketTheme\Toolbox\Event\Event;
 use RuntimeException;
 use function array_key_exists;
 use function count;
+use function in_array;
 use function is_array;
 use function is_string;
 use function strlen;
@@ -204,8 +205,8 @@ class Uri
         // set active language
         $uri = $language->setActiveFromUri($uri);
 
-        // split the URL and params
-        $bits = parse_url($uri);
+        // split the URL and params (and make sure that the path isn't seen as domain)
+        $bits = parse_url('http://domain.com' . $uri);
 
         //process fragment
         if (isset($bits['fragment'])) {
@@ -394,7 +395,7 @@ class Uri
      * Return the Extension of the URI
      *
      * @param string|null $default
-     * @return string The extension of the URI
+     * @return string|null The extension of the URI
      */
     public function extension($default = null)
     {
@@ -518,7 +519,7 @@ class Uri
      * Return the full uri
      *
      * @param bool $include_root
-     * @return mixed
+     * @return string
      */
     public function uri($include_root = true)
     {
@@ -664,7 +665,7 @@ class Uri
      */
     public static function paramsRegex()
     {
-        return '/\/([^\:\#\/\?]*' . Grav::instance()['config']->get('system.param_sep') . '[^\:\#\/\?]*)/';
+        return '/\/{1,}([^\:\#\/\?]*' . Grav::instance()['config']->get('system.param_sep') . '[^\:\#\/\?]*)/';
     }
 
     /**
@@ -674,10 +675,15 @@ class Uri
      */
     public static function ip()
     {
+        $ip = 'UNKNOWN';
+
         if (getenv('HTTP_CLIENT_IP')) {
             $ip = getenv('HTTP_CLIENT_IP');
+        } elseif (getenv('HTTP_CF_CONNECTING_IP')) {
+            $ip = getenv('HTTP_CF_CONNECTING_IP');
         } elseif (getenv('HTTP_X_FORWARDED_FOR') && Grav::instance()['config']->get('system.http_x_forwarded.ip')) {
-            $ip = getenv('HTTP_X_FORWARDED_FOR');
+            $ips = array_map('trim', explode(',', getenv('HTTP_X_FORWARDED_FOR')));
+            $ip = array_shift($ips);
         } elseif (getenv('HTTP_X_FORWARDED') && Grav::instance()['config']->get('system.http_x_forwarded.ip')) {
             $ip = getenv('HTTP_X_FORWARDED');
         } elseif (getenv('HTTP_FORWARDED_FOR')) {
@@ -686,8 +692,6 @@ class Uri
             $ip = getenv('HTTP_FORWARDED');
         } elseif (getenv('REMOTE_ADDR')) {
             $ip = getenv('REMOTE_ADDR');
-        } else {
-            $ip = 'UNKNOWN';
         }
 
         return $ip;
@@ -1408,18 +1412,14 @@ class Uri
     /**
      * Check if this is a valid Grav extension
      *
-     * @param string $extension
+     * @param string|null $extension
      * @return bool
      */
-    public function isValidExtension($extension)
+    public function isValidExtension($extension): bool
     {
-        $valid_page_types = implode('|', Utils::getSupportPageTypes());
+        $extension = (string)$extension;
 
-        // Strip the file extension for valid page types
-        if (preg_match('/(' . $valid_page_types . ')/', $extension)) {
-            return true;
-        }
-        return false;
+        return $extension !== '' && in_array($extension, Utils::getSupportPageTypes(), true);
     }
 
     /**
@@ -1501,7 +1501,7 @@ class Uri
      * @param string $delimiter
      * @return string
      */
-    private function processParams($uri, $delimiter = ':')
+    private function processParams(string $uri, string $delimiter = ':'): string
     {
         if (strpos($uri, $delimiter) !== false) {
             preg_match_all(static::paramsRegex(), $uri, $matches, PREG_SET_ORDER);

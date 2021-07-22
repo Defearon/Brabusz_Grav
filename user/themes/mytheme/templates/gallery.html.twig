@@ -116,12 +116,50 @@ $(window).load(function() {
                             <ul id="filters" class="pagination option-set clearfix" data-option-key="filter">
                                 <li><a href="#filter" data-option-value="*" class="selected">{{ page.header.showall }}</a></li>
                                 {% for item in page.header.filters %}
-                                    <li><a href="#filter" data-option-value=".{{ item.name }}">{{ item.name }} {{ item.description  }}</a></li>
+                                    <li><a href="#filter" data-option-value=".{{ item.value }}">{{ item.name }} {{ item.description  }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
 
-<!-- KÉP -->
+
+<!-- SAJÁT -->
+                        <div class="containerExtra">
+                          <div id="container" class="clearfix">
+                            {% for child in page.children %}
+                                <div class="element transition {{ child.header.filter }}" data-category="transition">
+                                  <a href="{{ child.media[child.header.image].url }}" class="thumb">
+                                    <figure class="img-polaroid">
+                                      {{ child.media[child.header.image]|raw }}
+                                        <div class="vehicle-title">
+                                          {{ child.header.title }}
+                                        </div></a>
+
+
+                                        <div class="vehicle-capacity">
+                                          {{ child.header.capacity }}
+                                        </div>
+
+                                      <span class="vehicle-description">
+                                        {{ child.header.description }}
+                                      </span>
+
+                                      {% if child.header.button %}
+                                        <br/>
+                                        <a href="{{ child.url }}" class="btn vehicle-button">
+                                          {{ child.header.button }}
+                                        </a>
+                                      {% endif %}
+
+                                    </figure>
+                                </div>
+                          {% endfor %}
+                        </div>
+                       {{ page.content|raw }}
+                    </div>
+
+<!-- KÉP
+
+
 
                         <div class="containerExtra">
                             <div id="container" class="clearfix">
@@ -130,7 +168,9 @@ $(window).load(function() {
                                         <a href="{{ page.media[element.image].url }}" class="thumb">
 
                                         <figure class="img-polaroid">
-                                          {{ page.media[element.image].resize(270, 190).html()|raw }}
+
+                                          {{ page.media[element.image]|raw }}
+
                                           <div class="vehicle-title">
                                             {{ element.title }}
                                           </div></a>
@@ -149,9 +189,9 @@ $(window).load(function() {
                                     </div>
                                 {% endfor %}
                             </div>
-                            <!-- {{ page.content|raw }} -->
+                           {{ page.content|raw }}
                         </div>
-
+-->
 
                     </div>
                 </div>

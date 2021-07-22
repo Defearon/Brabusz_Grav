@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Framework\Flex
  *
- * @copyright  Copyright (C) 2015 - 2020 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -196,9 +196,10 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
     /**
      * Refresh object from the storage.
      *
+     * @param bool $keepMissing
      * @return bool True if the object was refreshed
      */
-    public function refresh(): bool
+    public function refresh(bool $keepMissing = false): bool
     {
         $key = $this->getStorageKey();
         if ('' === $key) {
@@ -216,20 +217,36 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
             return false;
         }
 
+        // Get current elements (if requested).
+        $current = $keepMissing ? $this->getElements() : [];
+        // Get elements from the filesystem.
         $elements = $storage->readRows([$key => null])[$key] ?? null;
-        if (null !== $elements || isset($elements['__ERROR'])) {
-            $meta = $elements['_META'] ?? $meta;
+        if (null !== $elements) {
+            $meta = $elements['__META'] ?? $meta;
+            unset($elements['__META']);
             $this->filterElements($elements);
             $newKey = $meta['key'] ?? $this->getKey();
             if ($meta) {
                 $this->setMetaData($meta);
             }
             $this->objectConstruct($elements, $newKey);
-        }
 
-        /** @var Debugger $debugger */
-        $debugger = Grav::instance()['debugger'];
-        $debugger->addMessage("Refreshed {$this->getFlexType()} object {$this->getKey()}", 'debug');
+            if ($current) {
+                // Inject back elements which are missing in the filesystem.
+                $data = $this->getBlueprint()->flattenData($current);
+                foreach ($data as $property => $value) {
+                    if (strpos($property, '.') === false) {
+                        $this->defProperty($property, $value);
+                    } else {
+                        $this->defNestedProperty($property, $value);
+                    }
+                }
+            }
+
+            /** @var Debugger $debugger */
+            $debugger = Grav::instance()['debugger'];
+            $debugger->addMessage("Refreshed {$this->getFlexType()} object {$this->getKey()}", 'debug');
+        }
 
         return true;
     }
@@ -281,7 +298,11 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
 
         $weight = 0;
         foreach ($properties as $property) {
-            $weight += $this->searchNestedProperty($property, $search, $options);
+            if (strpos($property, '.')) {
+                $weight += $this->searchNestedProperty($property, $search, $options);
+            } else {
+                $weight += $this->searchProperty($property, $search, $options);
+            }
         }
 
         return $weight > 0 ? min($weight, 1) : 0;
@@ -671,6 +692,17 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
     }
 
     /**
+     * @param UserInterface|null $user
+     */
+    public function check(UserInterface $user = null): void
+    {
+        // If user has been provided, check if the user has permissions to save this object.
+        if ($user && !$this->isAuthorized('save', null, $user)) {
+            throw new \RuntimeException('Forbidden', 403);
+        }
+    }
+
+    /**
      * {@inheritdoc}
      * @see FlexObjectInterface::save()
      */
@@ -885,6 +917,14 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
         ];
     }
 
+    /**
+     * Clone object.
+     */
+    public function __clone()
+    {
+        // Allows future compatibility as parent::__clone() works.
+    }
+
     protected function markAsCopy(): void
     {
         $meta = $this->getMetaData();
@@ -1032,6 +1072,17 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
         }
 
         return $action;
+    }
+
+    /**
+     * Method to reset blueprints if the type changes.
+     *
+     * @return void
+     * @since 1.7.18
+     */
+    protected function resetBlueprints(): void
+    {
+        $this->_blueprint = [];
     }
 
     // DEPRECATED METHODS
