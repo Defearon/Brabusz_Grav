@@ -1,10 +1,4 @@
 ---
-title: Welcome Message!
-description: Beciegast nveriti vitaesaert asety kertya aset aplica boserde nerafae kertyuraue styasnemo faserani  iasera khatrsasas ptaiadeser daesraeds. Casrolern atur aut oditaut. onsequuntur magni dolqui ratione voluptatemsequi nesciunt orasario jauystase joasuaserya vytarsa numquam eius modi teincidunt, ut labore et dolore magnam liaseras.
-buttons:
-    - text: more
-      url: '#'
-      class: btn btn-default btn-lg btn1 animate__animated animate__pulse animate__infinite     
 process:
   twig: true
 markdown:
@@ -36,16 +30,6 @@ markdown:
 
 <div class="carousel-container" markdown=1>
   ![](c5.jpg?cropZoom=1500,500)
-
-</div>
-
-<div class="carousel-container" markdown=1>
-  ![](c6.jpg?cropZoom=1500,500)
-
-</div>
-
-<div class="carousel-container" markdown=1>
-  ![](c7.jpg?cropZoom=1500,500)
 
 </div>
 

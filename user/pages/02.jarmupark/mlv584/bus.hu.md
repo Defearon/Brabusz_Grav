@@ -4,5 +4,4 @@ image: IMG_2253.JPG
 title: Fiat Ducato
 capacity: '17 + 1 férőhely'
 description: 'EXTRÁK: klíma, tv, dvd, cd, dönthető ülések, biztonsági öv'
-button: Galéria
 ---

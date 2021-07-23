@@ -10,7 +10,7 @@ categories:
       title: Private transport
       title_position: bottom
       href: \szolgaltatasaink
-    - image: munkasszallitas.jpg
+    - image: jarmupark.jpg
       class: box1
       title: Vehicles
       title_position: bottom

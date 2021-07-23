@@ -3,7 +3,7 @@ markdown:
     extra: true
 ---
 # **Contact**  
-<div markdown="1" class="title6">
+<div markdown="1" class="title5">
 | | |
 |: ----------- |: ----------- |
 | **Office:** | 	2523 Sárisáp Május 1. sor 23., [+36 33 450 610](tel:+3633450610) |
