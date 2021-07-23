@@ -15,7 +15,7 @@ $(window).load(function() {
         $container.isotope({
             // options
             itemSelector : '.element',
-            layoutMode : 'masonry',
+            layoutMode : 'fitRows',
             transformsEnabled: true,
             columnWidth: function( containerWidth ) {
                 containerWidth = $browserWidth;
@@ -130,7 +130,7 @@ $(window).load(function() {
 
                                     <figure class="img-polaroid">
                                     <a href="{{ child.media[child.header.image].url }}" class="thumb">
-                                      {{ child.media[child.header.image]|raw }}
+                                      {{ child.media[child.header.image].forceResize(1280, 960).html()|raw }}
                                         <div class="vehicle-title">
                                           {{ child.header.title }}
                                         </div>
@@ -141,7 +141,7 @@ $(window).load(function() {
                                           {{ child.header.capacity }}
                                         </div>
 
-                                      <span class="vehicle-description">
+                                      <span class="vehicle-description" style="display:inline-block;min-height:4em;">
                                         {{ child.header.description }}
                                       </span>
 

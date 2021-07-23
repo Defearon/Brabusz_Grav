@@ -8,11 +8,11 @@ filters:
     -
         value: '1'
         name: Nagy
-        description: busz (41-61 fő)
+        description: busz (31-60 fő)
     -
         value: '2'
         name: Közepes
-        description: busz (21-40 fő)
+        description: busz (21-30 fő)
     -
         value: '3'
         name: Kis
