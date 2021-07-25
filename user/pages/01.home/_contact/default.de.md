@@ -2,7 +2,7 @@
 markdown:
     extra: true
 ---
-# **Contact**  
+# **Kontakt**  
 
 [center]
 [div class="column-wrapper"]

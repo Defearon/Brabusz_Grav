@@ -11,5 +11,5 @@ process:
 We kindly ask you to wait for our colleagues to contact you!
 [/notice]
 
-<a href="/" class="btn vehicle-button"> OK! <i class="las la-angle-double-right"></i>  </a>
+<a href="/en/" class="btn vehicle-button"> OK! <i class="las la-angle-double-right"></i>  </a>
 [/div]
