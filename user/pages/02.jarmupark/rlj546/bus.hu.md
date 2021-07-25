@@ -3,8 +3,7 @@ filter: '2'
 image: IMG_1476.JPG
 title: Iveco Mago2
 capacity: '30 + 1 férőhely'
-description: 'EXTRÁK: klíma, tv, cd, dönthető ülések, biztonsági öv'
-button: Galéria
+description: 'EXTRÁK: klíma, TV, CD, dönthető ülések, biztonsági öv'
 gallery:
 - IMG_1476.JPG
 - IMG_9408.jpg

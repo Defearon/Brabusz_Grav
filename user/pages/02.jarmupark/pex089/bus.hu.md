@@ -3,8 +3,7 @@ filter: '3'
 image: IMG_0929.JPG
 title: Iveco Daily
 capacity: '19 + 1 férőhely'
-description: 'EXTRÁK: klíma, cd, dönthető ülések, biztonsági öv'
-button: Galéria
+description: 'EXTRÁK: klíma, CD, dönthető ülések, biztonsági öv'
 gallery:
     - IMG_0915 2.JPG
     - IMG_0919 2.JPG

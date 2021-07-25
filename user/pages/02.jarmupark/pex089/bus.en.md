@@ -3,8 +3,7 @@ filter: '3'
 image: IMG_0929.JPG
 title: Iveco Daily
 capacity: '19 + 1 passangers'
-description: 'EXTRAS: climate control, cd, adjustable seats, seatbelt'
-button: Gallery
+description: 'EXTRAS: climate control, CD, adjustable seats, seatbelt'
 gallery:
     - IMG_0915 2.JPG
     - IMG_0919 2.JPG

@@ -129,8 +129,9 @@ $(window).load(function() {
                                 <div class="element transition {{ child.header.filter }}" data-category="transition">
 
                                     <figure class="img-polaroid">
-                                    <a href="{{ child.media[child.header.image].url }}" class="thumb">
-                                      {{ child.media[child.header.image].forceResize(1280, 960).html()|raw }}
+                                    <!--<a href="{{ child.media[child.header.image].url }}" class="thumb">-->
+                                    <a href="{{ child.url }}">
+                                      {{ child.media[child.header.image].forceResize(320, 240).html()|raw }}
                                         <div class="vehicle-title">
                                           {{ child.header.title }}
                                         </div>
@@ -145,12 +146,11 @@ $(window).load(function() {
                                         {{ child.header.description }}
                                       </span>
 
-                                      {% if child.header.button %}
+
                                         <br/>
                                         <a href="{{ child.url }}" class="btn vehicle-button">
-                                          {{ page.header.button }}
+                                          {{ page.header.button }} <i class="las la-angle-double-right"></i> 
                                         </a>
-                                      {% endif %}
 
                                     </figure>
                                 </div>

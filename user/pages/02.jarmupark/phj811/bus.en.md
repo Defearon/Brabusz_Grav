@@ -3,8 +3,7 @@ filter: '3'
 image: IMG_8159.jpg
 title: Ford Transit
 capacity: '13 + 1 passangers'
-description: 'EXTRAS: climate control, cd, seatbelt'
-button: Gallery
+description: 'EXTRAS: climate control, CD, seatbelt'
 gallery:
     - IMG_8159.jpg
     - IMG_8098.jpg

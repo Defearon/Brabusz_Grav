@@ -3,7 +3,7 @@ filter: '2'
 image: IMG_1501.JPG
 title: Iveco Wing
 capacity: '24 + 1 passangers'
-description: 'EXTRAS: climate control, tv, cd, adjustable seats, seatbelt'
+description: 'EXTRAS: climate control, TV, CD, adjustable seats, seatbelt'
 button: Galéria
 gallery:
     - IMG_1501.JPG

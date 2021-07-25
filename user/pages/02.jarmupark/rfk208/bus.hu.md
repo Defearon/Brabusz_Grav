@@ -3,8 +3,7 @@ filter: '1'
 image: IMG_9645.jpg
 title: Irisbus Ares
 capacity: '54 + 1 férőhely'
-description: 'EXTRÁK: klíma, hűtőszekrény, cd, wc, dönthető ülések, biztonsági öv'
-button: Galéria
+description: 'EXTRÁK: klíma, hűtőszekrény, CD, WC, dönthető ülések, biztonsági öv'
 gallery:
 - IMG_3550.jpg
 - IMG_4845.jpg
