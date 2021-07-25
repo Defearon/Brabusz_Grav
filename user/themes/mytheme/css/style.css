@@ -12,6 +12,10 @@
 	display: block;
 }*/
 
+.containerExtra {
+	text-align: center;
+}
+
 .smalldiv-to-half-window{
 	height: 50vh;
 }
@@ -75,6 +79,12 @@
 	  grid-template-columns: repeat(2, 1fr);
 	  gap: 20px;
 	}
+	/* Ha 2 oszlop van és páratlan, akkor a legalsó legyen középen!*/
+	.column-wrapper > *:nth-last-child(1):nth-child(odd){
+		grid-column-start: 1;
+	  grid-column-end: 3;
+	}
+
 }
 
 /* nagy */
@@ -701,7 +711,7 @@ body {
 	background: #ffffff;
 }
 .row_9 {
-	padding: 31px 1.5rem 90px;
+	padding: 31px 1.5rem 31px;
 	background: #ffffff;
 }
 .row_10 {

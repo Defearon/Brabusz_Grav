@@ -131,7 +131,7 @@ $(window).load(function() {
                                     <figure class="img-polaroid">
                                     <!--<a href="{{ child.media[child.header.image].url }}" class="thumb">-->
                                     <a href="{{ child.url }}">
-                                      {{ child.media[child.header.image].forceResize(320, 240).html()|raw }}
+                                      {{ child.media[child.header.image].forceResize(720, 540).html()|raw }}
                                         <div class="vehicle-title">
                                           {{ child.header.title }}
                                         </div>
@@ -149,7 +149,7 @@ $(window).load(function() {
 
                                         <br/>
                                         <a href="{{ child.url }}" class="btn vehicle-button">
-                                          {{ page.header.button }} <i class="las la-angle-double-right"></i> 
+                                          {{ page.header.button }} <i class="las la-angle-double-right"></i>
                                         </a>
 
                                     </figure>

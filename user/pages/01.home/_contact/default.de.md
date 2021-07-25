@@ -48,10 +48,8 @@ markdown:
 #### Kontonummer: 58600434-11224677
 [/div]
 
-
 [/div]
 [/center]
-
 <!--
 <div markdown="1" class="title6">
 | | |
