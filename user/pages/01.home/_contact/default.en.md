@@ -43,7 +43,7 @@ markdown:
 [/div]
 
 [div]
-## <i class="las la-money-check"></i> Financial information
+## <i class="las la-money-check"></i> Other information
 #### Tax number: 65984725-2-31
 #### Bank account number: 58600434-11224677
 [/div]

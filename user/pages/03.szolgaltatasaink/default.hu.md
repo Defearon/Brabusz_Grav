@@ -28,6 +28,6 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis eleifend rhoncus
 ![](test.png)
 [/ui-polaroid]
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis eleifend rhoncus sodales libero suspendisse pellentesque dis morbi venenatis nunc nisl nulla vel habitasse inceptos id commodo ultrices lectus integer magnis ad ligula et justo suscipit.
+Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis eleifend rhoncus sodales libero suspendisse pellentesque dis morbi venenatis nunc nisl n ulla vel habitasse inceptos id commodo ultrices lectus integer magnis ad ligula et justo suscipit.
 
 </div>

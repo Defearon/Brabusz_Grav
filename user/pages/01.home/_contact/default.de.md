@@ -43,7 +43,7 @@ markdown:
 [/div]
 
 [div]
-## <i class="las la-money-check"></i> Finanzinformation
+## <i class="las la-money-check"></i> Andere Informationen
 #### Steuernummer: 65984725-2-31
 #### Kontonummer: 58600434-11224677
 [/div]

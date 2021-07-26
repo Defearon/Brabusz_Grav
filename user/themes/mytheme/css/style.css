@@ -12,6 +12,30 @@
 	display: block;
 }*/
 
+.footer-flex-container{
+	display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+}
+
+.footer-flex-item{
+	width: 33.33%;
+	margin: 2vw;
+	display: block;
+ 	flex-grow: 0;
+ 	flex-shrink: 1;
+ 	flex-basis: auto;
+ 	align-self: auto;
+ 	order: 0;
+}
+
+.fb-page{
+	margin-bottom: 5px;
+}
+
 .containerExtra {
 	text-align: center;
 }
@@ -446,7 +470,7 @@ grid-template-columns: 0.3fr 1.7fr;
 @media only screen and (max-width: 1350px) {
 	.ajanlat {
 		  padding: 1rem 2rem;
-		/*		margin-right: -3.5rem !important;*/
+				margin-right: -2.1vw !important;
 	}
 	.sticky .navbar-button {
 		margin-bottom: -5rem;
@@ -459,7 +483,7 @@ grid-template-columns: 0.3fr 1.7fr;
 	.ajanlat {
 		position: absolute !important;
 		top: -7rem;
-		right: 2rem;
+		right: 0;
 		  padding: 2rem 4rem;
 			margin-right: 10rem;
 	}
@@ -627,10 +651,9 @@ div.maps {
 	 margin-bottom: 1.5rem;
 }
 
-iframe {
+/*iframe {
 	padding: 10px;
-
-}
+}*/
 
 div.textwhite {
 	color: #ffffff;

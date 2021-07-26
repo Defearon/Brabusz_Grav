@@ -44,7 +44,7 @@ markdown:
 [/div]
 
 [div]
-## <i class="las la-money-check"></i> Pénzügyi adatok
+## <i class="las la-money-check"></i> Adatok
 #### Adószám: 65984725-2-31
 #### Bankszámlaszám: 58600434-11224677
 [/div]
