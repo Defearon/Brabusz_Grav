@@ -9,7 +9,7 @@ $(document).ready(function() {
   var footer = document.getElementById("custom-footer").offsetTop;
 
   $(window).scroll(function() {
-    /*window.alert(window.pageYOffset);*/
+  /*window.alert(window.pageYOffset);*/
     if (window.pageYOffset > sticky) {
       navbar.classList.add("sticky")
     } else {

@@ -12,6 +12,15 @@
 	display: block;
 }*/
 
+.btn-primary {
+	background: #253d7f!important;
+}
+
+div.anchor {
+    margin-top: -240px;
+		padding-top: 240px;
+}
+
 .footer-flex-container{
 	display: flex;
 		flex-direction: row;
@@ -86,7 +95,7 @@
 }
 
 /* kicsi */
-@media only screen and (min-width: 1px) {
+@media only screen and (min-width: 1px) and (max-width: 719px) {
 	.column-wrapper {
 		text-align: center;
 	  display: grid;
@@ -473,8 +482,24 @@ grid-template-columns: 0.3fr 1.7fr;
   &:hover { background: #0069a8; }
 }
 
+
 /* kicsi */
-@media only screen and (max-width: 1350px) {
+@media only screen and (min-width: 1px) and (max-width: 719px) {
+	.ajanlat {
+		position: absolute !important;
+		top: -7rem;
+		right: 0;
+			padding: .7rem 1rem;
+			margin-right: 2.5rem;
+	}
+	.sticky .navbar-button {
+		margin-bottom: -5rem;
+	}
+
+}
+
+/* közepes */
+@media only screen and (min-width: 720px) and (max-width: 1439px) {
 	.ajanlat {
 		  padding: 1rem 2rem;
 				margin-right: -2.1vw !important;
@@ -486,7 +511,7 @@ grid-template-columns: 0.3fr 1.7fr;
 }
 
 /* Nagy */
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1440px) {
 	.ajanlat {
 		position: absolute !important;
 		top: -7rem;

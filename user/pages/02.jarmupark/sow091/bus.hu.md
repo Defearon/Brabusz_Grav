@@ -15,14 +15,10 @@ gallery:
         type: image/jpeg
         size: 968941
         path: IMG-4341.jpg
-    IMG_0098.JPG:
-        name: IMG_0098.JPG
+    IMG_1550.JPG:
+        name: IMG_1550.JPG
         type: image/jpeg
-        size: 798603
-        path: IMG_0098.JPG
-    IMG_0099.JPG:
-        name: IMG_0099.JPG
-        type: image/jpeg
-        size: 691833
-        path: IMG_0099.JPG
+        size: 842021
+        path: IMG_1550.JPG
 ---
+

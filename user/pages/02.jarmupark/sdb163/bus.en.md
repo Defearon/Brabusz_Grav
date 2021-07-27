@@ -15,14 +15,14 @@ gallery:
         type: image/jpeg
         size: 1259006
         path: IMG_8181.jpg
-    IMG_6998.JPG:
-        name: IMG_6998.JPG
-        type: image/jpeg
-        size: 765242
-        path: IMG_6998.JPG
     IMG-9192.jpg:
         name: IMG-9192.jpg
         type: image/jpeg
         size: 668370
         path: IMG-9192.jpg
+    IMG_1552.JPG:
+        name: IMG_1552.JPG
+        type: image/jpeg
+        size: 1036540
+        path: IMG_1552.JPG
 ---

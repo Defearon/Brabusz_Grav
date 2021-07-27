@@ -4,12 +4,12 @@ categories:
       class: box1
       title: Worker's transport
       title_position: bottom
-      href: \szolgaltatasaink
+      href: \szolgaltatasaink#munkasszallitas
     - image: kulonjarat.jpg
       class: box1
       title: Private transport
       title_position: bottom
-      href: \szolgaltatasaink
+      href: \szolgaltatasaink#kulonjarat
     - image: jarmupark.jpg
       class: box1
       title: Vehicles
