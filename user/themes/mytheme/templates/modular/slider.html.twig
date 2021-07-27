@@ -1,1 +1,34 @@
-  {{ content|raw }}
+
+<div class="owl-carousel owl-theme">
+{% for element in page.header.images  %}
+  <div id="carousel" class="carousel-container item" markdown=1>
+    {{ page.media[element.image | first.name ].cropZoom(1500,500)|raw  }}
+
+    {% if element.title or element.description %}
+    <div class="carousel-textblock">
+      <h1>{{ element.title }}</h1>
+      <p>{{ element.description }}</p>
+    </div>
+    {% endif %}
+
+  </div>
+{% endfor %}
+
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    margin:{{page.header.carousel.margin}},
+    nav: {{page.header.carousel.nav}},
+    loop:{{page.header.carousel.loop}},
+    autoplay:{{page.header.carousel.autoplay}},
+    items:{{page.header.carousel.items}},
+    autoplayTimeout: {{page.header.carousel.autoplayTimeout}},
+    smartSpeed: {{page.header.carousel.smartSpeed}},
+    autoplayHoverPause: {{page.header.carousel.autoplayHoverPause}},
+
+  })
+});
+</script>

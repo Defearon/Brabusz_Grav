@@ -1,0 +1,128 @@
+title: Csúszka
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        slider:
+          type: tab
+          title: Csúszka
+
+          fields:
+            slider_settings:
+              type: spacer
+              title: Csúszka általános beállításai
+
+# BEÁLLÍTÁSOK
+
+            header.carousel.items:
+              label: 'Hány elemet mutasson egyszerre:'
+              type: integer
+              validate:
+               type: number
+               min: 1
+
+            header.carousel.margin:
+              label: 'Margó'
+              type: number
+
+            header.carousel.loop:
+              type: toggle
+              label: "Végtelen"
+              highlight: 1
+              default: 0
+              options:
+                1: Igen
+                0: Nem
+              validate:
+                type: bool
+
+            header.carousel.autoplay:
+              type: toggle
+              label: "Automatikus váltás"
+              highlight: 1
+              default: 0
+              options:
+                1: Igen
+                0: Nem
+              validate:
+                type: bool
+
+            header.carousel.autoplayTimeout:
+              label: 'Váltakozás gyakorisága (ms):'
+              type: integer
+              validate:
+               type: number
+               min: 1
+
+            header.carousel.autoplayHoverPause:
+              type: toggle
+              label: "Kijelölésre megáll"
+              highlight: 1
+              default: 0
+              options:
+                1: Igen
+                0: Nem
+              validate:
+                type: bool
+
+            header.carousel.nav:
+              type: toggle
+              label: "Navigáció"
+              highlight: 1
+              default: 0
+              options:
+                1: Igen
+                0: Nem
+              validate:
+                type: bool
+
+            header.carousel.cropZoomWidth:
+              label: 'Zoom képszélessége (px)'
+              type: integer
+              default: 1500
+              validate:
+               type: number
+               min: 1
+
+            header.carousel.cropZoomHeight:
+              label: 'Zoom képmagassága (px)'
+              type: integer
+              default: 500
+              validate:
+               type: number
+               min: 1
+
+            slider_images:
+              type: spacer
+              title: Csúszka médiái
+
+# KÉPEK
+
+            header.images:
+              name: images
+              type: list
+              style: vertical
+              label: Kép
+              fields:
+                .title:
+                  toggleable: true
+                  type: text
+                  label: Cím
+                .description:
+                  toggleable: true
+                  type: textarea
+                  label: Paragrafus
+                .image:
+                  type: file
+                  label: Kép
+                  destination: 'self@'
+                  multiple: false
+                  accept:
+                    - image/*

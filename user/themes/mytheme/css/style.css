@@ -96,7 +96,7 @@
 }
 
 /* közepes */
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 720px) and (max-width: 1339px){
 	.column-wrapper {
 		text-align: center;
 	  display: grid;
@@ -119,6 +119,13 @@
 	  grid-template-columns: repeat(3, 1fr);
 	  gap: 20px;
 	}
+
+	/* Ha 3 oszlop van és nem osztható 3-mal, akkor a legalsó legyen középen!*/
+	.column-wrapper > *:nth-last-child(1):not(:nth-child(3n)){
+		grid-column-start: 1;
+	  grid-column-end: 4;
+	}
+
 }
 
 
@@ -533,6 +540,7 @@ grid-template-columns: 0.3fr 1.7fr;
   color: #FFF;
   text-shadow: 0 .125em .125em rgba(0, 0, 0, .65);
 	text-align: center;
+	padding-top: 1vw;
 	padding-bottom: 1vw;
 	padding-left: 1vw;
 	padding-right: 1vw;

@@ -129,9 +129,9 @@ $(window).load(function() {
                                 <div class="element transition {{ child.header.filter }}" data-category="transition">
 
                                     <figure class="img-polaroid">
-                                    <!--<a href="{{ child.media[child.header.image].url }}" class="thumb">-->
+
                                     <a href="{{ child.url }}">
-                                      {{ child.media[child.header.image].forceResize(720, 540).html()|raw }}
+                                      {{ child.media[child.header.image | first.name].forceResize(720, 540).html()|raw }}
                                         <div class="vehicle-title">
                                           {{ child.header.title }}
                                         </div>

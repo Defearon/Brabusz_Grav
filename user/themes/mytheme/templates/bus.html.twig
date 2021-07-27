@@ -121,15 +121,15 @@ $(window).load(function() {
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="containerExtra">
                             <div id="container" class="clearfix">
-                                {% for img in page.header.gallery  %}
-                                    <div class="element transition" data-category="transition">
-                                        <figure class="img-polaroid">
-                                          <a href="{{ page.media[img].url }}" class="thumb">
-                                            {{ page.media[img].forceResize(320, 240).html()|raw  }}
-                                          </a>
-                                        </figure>
-                                    </div>
-                                {% endfor %}
+                            {% for img in page.header.gallery  %}
+                                <div class="element transition" data-category="transition">
+                                    <figure class="img-polaroid">
+                                      <a href="{{ page.media[img.name].url }}" class="thumb">
+                                        {{ page.media[img.name].cropResize(720, 540).html()|raw  }}
+                                      </a>
+                                    </figure>
+                                </div>
+                            {% endfor %}
                             </div>
                         </div>
 
