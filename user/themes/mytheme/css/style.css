@@ -95,7 +95,7 @@ div.anchor {
 }
 
 /* kicsi */
-@media only screen and (min-width: 1px) and (max-width: 719px) {
+@media only screen and (min-width: 1px) and (max-width: 720px) {
 	.column-wrapper {
 		text-align: center;
 	  display: grid;
@@ -105,7 +105,7 @@ div.anchor {
 }
 
 /* közepes */
-@media only screen and (min-width: 720px) and (max-width: 1339px){
+@media only screen and (min-width: 720px) and (max-width: 1440px){
 	.column-wrapper {
 		text-align: center;
 	  display: grid;
@@ -484,7 +484,7 @@ grid-template-columns: 0.3fr 1.7fr;
 
 
 /* kicsi */
-@media only screen and (min-width: 1px) and (max-width: 719px) {
+@media only screen and (min-width: 1px) and (max-width: 720px) {
 	.ajanlat {
 		position: absolute !important;
 		top: -7rem;
@@ -499,7 +499,7 @@ grid-template-columns: 0.3fr 1.7fr;
 }
 
 /* közepes */
-@media only screen and (min-width: 720px) and (max-width: 1439px) {
+@media only screen and (min-width: 720px) and (max-width: 1440px) {
 	.ajanlat {
 		  padding: 1rem 2rem;
 				margin-right: -2.1vw !important;
