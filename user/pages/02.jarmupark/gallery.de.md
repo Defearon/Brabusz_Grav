@@ -4,7 +4,7 @@ menu: Fahrzeuge
 onpage_menu: true
 showall: Alles
 button: 'Galerie'
-filters:
+categories:
     -
         value: '3'
         name: Kleinbus

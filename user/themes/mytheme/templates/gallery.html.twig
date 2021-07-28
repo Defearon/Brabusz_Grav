@@ -115,7 +115,7 @@ $(window).load(function() {
                         <div id="options" class="clearfix">
                             <ul id="filters" class="pagination option-set clearfix" data-option-key="filter">
                                 <li><a href="#filter" data-option-value="*" class="selected">{{ page.header.showall }}</a></li>
-                                {% for item in page.header.filters %}
+                                {% for item in page.header.categories %}
                                     <li><a href="#filter" data-option-value=".{{ item.value }}">{{ item.name }} {{ item.description  }}</a></li>
                                 {% endfor %}
                             </ul>

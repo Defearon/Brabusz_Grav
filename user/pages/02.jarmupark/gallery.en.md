@@ -4,7 +4,7 @@ menu: Vehicles
 onpage_menu: true
 showall: Show all
 button: 'Gallery'
-filters:
+categories:
     -
         value: '3'
         name: Minibus

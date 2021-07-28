@@ -4,17 +4,17 @@ menu: Járműpark
 onpage_menu: true
 showall: Mind
 button: 'Galéria'
-filters:
+categories:
     -
         value: '3'
-        name: Kis
-        description: busz (1-20 fő)
+        name: Kis busz
+        description: (1-20 fő)
     -
         value: '2'
-        name: Közepes
-        description: busz (21-30 fő)
+        name: Közepes busz
+        description: (21-30 fő)
     -
         value: '1'
-        name: Nagy
-        description: busz (31-60 fő)
+        name: Nagy busz
+        description: (31-60 fő)
 ---
