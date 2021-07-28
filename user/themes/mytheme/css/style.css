@@ -502,7 +502,7 @@ grid-template-columns: 0.3fr 1.7fr;
 @media only screen and (min-width: 720px) and (max-width: 1440px) {
 	.ajanlat {
 		  padding: 1rem 2rem;
-				margin-right: -2.1vw !important;
+				margin-right: -1.3vw !important;
 	}
 	.sticky .navbar-button {
 		margin-bottom: -5rem;
