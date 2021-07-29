@@ -2,7 +2,7 @@
 #**Referenciák**
 [/center]
 <hr style="border: 1px solid black;"/>
-[div class="column-wrapper animate__animated animate__fadeInUp"]
+[div class="column-wrapper"]
 ![Aptiv](Aptiv.png?resize=250,150&classes=col,col,wobble-vertical-on-hover "Aptiv")  
 
 ![DHL](DHL.png?resize=250,150&classes=col,wobble-vertical-on-hover "DHL")  

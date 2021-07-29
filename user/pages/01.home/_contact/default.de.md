@@ -2,6 +2,7 @@
 markdown:
     extra: true
 ---
+[div id="contact"]
 # **Kontakt**  
 
 [center]
@@ -50,6 +51,9 @@ markdown:
 
 [/div]
 [/center]
+
+[/div]
+
 <!--
 <div markdown="1" class="title6">
 | | |
