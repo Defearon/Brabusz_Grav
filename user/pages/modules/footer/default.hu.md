@@ -53,7 +53,9 @@ markdown:
 
 <br/>
 
-<div class="fb-page" data-href="https://www.facebook.com/brabusz.szemelyszallitas/" data-tabs="" data-width="2000" data-height="150" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/brabusz.szemelyszallitas/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/brabusz.szemelyszallitas/">Brabusz Személyszállítás</a></blockquote></div>
+
+<div class="fb-page" data-href="https://www.facebook.com/brabusz.szemelyszallitas/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/brabusz.szemelyszallitas/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/brabusz.szemelyszallitas/">Brabusz Személyszállítás</a></blockquote></div>
+
 
 <hr>
 A weboldalt készítette  
