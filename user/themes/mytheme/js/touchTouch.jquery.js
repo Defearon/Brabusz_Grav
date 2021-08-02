@@ -48,7 +48,7 @@
 			var touch = e.originalEvent,
 				startX = touch.changedTouches[0].pageX;
 
-			slider.on('touchmove',function(e){
+		/*	slider.on('touchmove',function(e){
 
 				e.preventDefault();
 
@@ -64,6 +64,7 @@
 					showNext();
 				}
 			});
+			*/
 
 			// Return false to prevent image
 			// highlighting on Android
