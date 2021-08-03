@@ -15,4 +15,5 @@ gallery:
         type: image/jpeg
         size: 843340
         path: IMG_2253.JPG
+visible: false
 ---

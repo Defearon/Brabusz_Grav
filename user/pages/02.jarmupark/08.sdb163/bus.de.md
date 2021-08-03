@@ -25,4 +25,5 @@ gallery:
         type: image/jpeg
         size: 1036540
         path: IMG_1552.JPG
+visible: false
 ---

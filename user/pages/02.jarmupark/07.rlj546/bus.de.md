@@ -30,4 +30,5 @@ gallery:
         type: image/jpeg
         size: 718601
         path: IMG_1476.JPG
+visible: false
 ---

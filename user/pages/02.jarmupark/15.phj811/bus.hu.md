@@ -30,5 +30,5 @@ gallery:
         type: image/jpeg
         size: 1091645
         path: IMG_8159.jpg
+visible: false
 ---
-

@@ -15,6 +15,18 @@ form:
           title: Galéria
 
           fields:
+            header.visible:
+              type: toggle
+              label: "Menüben látható (mobilon)"
+              highlight: 1
+              default: 0
+              options:
+                1: Igen
+                0: Nem
+              validate:
+                type: bool
+
+
             header.title:
               label: 'Jármű megnevezése'
               type: text

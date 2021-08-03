@@ -30,5 +30,5 @@ gallery:
         type: image/jpeg
         size: 1007963
         path: IMG_1553.jpg
+visible: false
 ---
-

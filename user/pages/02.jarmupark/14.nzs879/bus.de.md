@@ -30,4 +30,5 @@ gallery:
         type: image/jpeg
         size: 1035766
         path: IMG_3364.jpg
+visible: false
 ---

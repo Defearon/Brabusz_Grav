@@ -25,4 +25,5 @@ gallery:
         type: image/jpeg
         size: 1144527
         path: IMG_9215.jpg
+visible: false
 ---

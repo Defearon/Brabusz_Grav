@@ -20,5 +20,5 @@ gallery:
         type: image/jpeg
         size: 743324
         path: IMG_7938.jpg
+visible: false
 ---
-

@@ -25,4 +25,5 @@ gallery:
         type: image/jpeg
         size: 929141
         path: IMG_8298.jpg
+visible: false
 ---

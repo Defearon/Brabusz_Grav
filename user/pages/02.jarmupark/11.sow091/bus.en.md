@@ -20,4 +20,6 @@ gallery:
         type: image/jpeg
         size: 842021
         path: IMG_1550.JPG
+
+visible: false
 ---

@@ -30,4 +30,5 @@ gallery:
         type: image/jpeg
         size: 1031716
         path: IMG_9908.jpg
+visible: false
 ---

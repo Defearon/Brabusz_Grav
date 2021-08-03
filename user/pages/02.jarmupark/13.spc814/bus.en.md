@@ -26,4 +26,5 @@ gallery:
         type: image/jpeg
         size: 755169
         path: IMG_1501.JPG
+visible: false
 ---

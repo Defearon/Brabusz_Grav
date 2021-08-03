@@ -30,4 +30,5 @@ gallery:
         type: image/jpeg
         size: 919314
         path: IMG_1548.jpg
+visible: false
 ---
