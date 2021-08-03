@@ -1,10 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
-{% do assets.addCss('theme://css/touchTouch.css') %}
-{% do assets.addJs('theme://js/touchTouch.jquery.js') %}
-{% do assets.addJs('theme://js/jquery.isotope.min.js') %}
 {% set script %}
-$(window).load(function() {
+<!-- $(window).load(function() {
     var $container = $('#container');
     //Run to initialise column sizes
     updateSize();
@@ -100,9 +97,9 @@ $(window).load(function() {
         // Initialize the gallery
         $('.thumb').touchTouch();
 
-    });
+    }); -->
 {% endset %}
-{% do assets.addInlineJs(script) %}
+{# do assets.addInlineJs(script) #}
 
 {% block content %}
     <div id="content">
