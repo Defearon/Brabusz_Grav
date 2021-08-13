@@ -818,12 +818,13 @@ h3 {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: normal;
-	border-radius: 50px;
+	border-radius: 50%;
 	border: none;
-	padding: 20px 0 24px;
+	/*padding: 20px 0 24px;*/
+	padding: 2rem;
 	margin: 0;
-	width: 65px;
-	height: 65px;
+/*	width: 65px;
+	height: 65px;*/
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }

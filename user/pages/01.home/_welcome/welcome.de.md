@@ -1,9 +1,9 @@
 ---
 title: Willkommen!
-description: 'Willkommen! Sag hier was...'
+description: ''
 buttons:
     -
         text: Kontakt
-        url: \kapcsolat
+        url: \de\kapcsolat
         class: 'btn btn-default btn-lg btn1 animate__animated animate__pulse animate__infinite'
 ---

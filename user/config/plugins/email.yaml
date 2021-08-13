@@ -9,11 +9,11 @@ queue:
   flush_msg_limit: 10
   flush_time_limit: 100
 mailer:
-  engine: smtp
+  engine: sendmail
   smtp:
     server: smtp.gmail.com
-    port: 587
-    encryption: tls
+    port: 465
+    encryption: ssl
     user: brabusz.noreply@gmail.com
     password: BraBusz2012
     auth_mode: null

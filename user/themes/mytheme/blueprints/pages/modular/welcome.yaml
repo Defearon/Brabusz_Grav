@@ -1,4 +1,4 @@
-title: Galéria
+title: Szövegek
 '@extends':
     type: default
     context: blueprints://pages
@@ -10,11 +10,30 @@ form:
       active: 1
 
       fields:
-        gallery:
+        textfields:
           type: tab
-          title: Galéria
+          title: Szövegek
 
           fields:
-            header.button:
-              label: 'Gomb megnevezése'
+            header.title:
+              label: 'Főcím'
               type: text
+            header.description:
+              label: 'Alsó szöveg'
+              type: textarea
+
+            header.buttons:
+              name: buttons
+              type: list
+              style: vertical
+              label: Gombok
+              fields:
+                .text:
+                  type: text
+                  label: Gomb szövege
+                .url:
+                  type: text
+                  label: Navigációs url
+                .class:
+                  type: text
+                  label: CSS osztályok

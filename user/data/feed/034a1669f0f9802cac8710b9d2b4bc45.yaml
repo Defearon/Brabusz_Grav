@@ -1,10 +1,10 @@
-last_checked: 1627996178
+last_checked: 1628858234
 data:
   -
     title: 'Skeleton Build Automation'
     url: 'https://getgrav.org/blog/skeletons-build-automation'
     date: 1614347940
-    nicetime: '5 hónap elteltével'
+    nicetime: '6 hónap elteltével'
   -
     title: 'Using Grav''s new built-in Web Server'
     url: 'https://getgrav.org/blog/using-builtin-webserver'
@@ -14,12 +14,12 @@ data:
     title: 'Grav 1.7 CLI Self-Upgrade Bug'
     url: 'https://getgrav.org/blog/grav-170-cli-self-upgrade-bug'
     date: 1611222900
-    nicetime: '6 hónap elteltével'
+    nicetime: '7 hónap elteltével'
   -
     title: 'Grav 1.7 Released!'
     url: 'https://getgrav.org/blog/grav-1.7-released'
     date: 1611050100
-    nicetime: '6 hónap elteltével'
+    nicetime: '7 hónap elteltével'
   -
     title: 'Grav Premium Focus: NextGen Editor'
     url: 'https://getgrav.org/blog/premium-focus-nextgen-editor'
@@ -39,7 +39,7 @@ data:
     title: 'Grav 1.7 Stable Release - Jan 19th, 2021'
     url: 'https://getgrav.org/blog/grav-17-stable-jan-2021'
     date: 1605720180
-    nicetime: '8 hónap elteltével'
+    nicetime: '9 hónap elteltével'
   -
     title: 'Raising PHP Requirements... Again'
     url: 'https://getgrav.org/blog/raising-php-requirements-2020'
