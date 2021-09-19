@@ -41,11 +41,11 @@ forms:
             submit:
                 type: submit
                 value: Küldés
-                classes: btn btn-primary top-bottom-margin-10
+                classes: 'btn btn-primary top-bottom-margin-10'
             reset:
                 type: reset
                 value: Töröl
-                classes: btn btn-danger top-bottom-margin-10
+                classes: 'btn btn-danger top-bottom-margin-10'
         process:
             save:
                 fileprefix: contact-
@@ -72,6 +72,7 @@ title: Kapcsolat
 | **Állandó ügyelet:** | [+36 30 316 9048,   ](tel:+36303169048) [+36 30 339 2925](tel:+36303392925)|
 | **Adószám:** | 	65984725-2-31 |
 | **Bankszámlaszám:** | 	58600434-11224677 |
+| **Cégjegyzék szám:** | 	11-09-029067 |
 | | [www.brabusz.hu](/) |
 </div>
 [/center]
