@@ -2,6 +2,7 @@
 markdown:
     extra: true
 ---
+
 [center]
 ## © Brabusz Kft.
 <hr>
@@ -47,6 +48,7 @@ markdown:
 ## <i class="las la-money-check"></i> Adatok
 #### Adószám: 65984725-2-31
 #### Bankszámlaszám: 58600434-11224677
+#### Cégjegyzék szám: 11-09-029067
 [/div]
 
 [/div]
