@@ -1,0 +1,120 @@
+{% import 'macros/macros.html.twig' as macros %}
+
+
+{% if page.find('/modules/navbar') %}
+    {% set requesttxt = page.find('/modules/navbar').header.request %}
+{% else %}
+    {% set requesttxt = "Ajánlatkérés" %}
+{% endif %}
+
+<div class="inner">
+
+  <div class="navbar-logo logo">
+    <a href="{{ base_url_absolute }}"><img alt="Logo" width="400px" height="100px" src="{{ theme_url }}/img/logo.svg"></a>
+  </div>
+
+
+  <ul class="nav navbar-menu ">
+      {{ macros.nav_loop(pages) }}
+  </ul>
+
+  <div id="mobNav" class="navbar-mobile overlay">
+  <a id="nav-mobile-close" href="javascript:void(0)" class="closebtn">&times;</a>
+    <div class="overlay-content">
+      {{ macros.nav_loop(pages) }}
+    </div>
+  </div>
+
+  <span id="nav-mobile-open" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+
+    <div class="navbar-button each">
+      <a href="{{ base_url_absolute }}/kapcsolat" class="ajanlat "><span>{{requesttxt}}</span></a>
+    </div>
+
+    {% include 'partials/language-selector.html.twig' %}
+
+
+
+</div>
+
+<!--
+{% macro loop(page) %}
+    {% for p in page.children %}
+        {% if p.visible %}
+            {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+            <li class="{{ current_page }}">
+                <a href="{{ p.url }}">
+                    {{ p.menu }}
+                </a>
+                {% if p.children.count > 0 %}
+                    <ul>
+                        {{ _self.loop(p) }}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+<div class="inner">
+
+<div class="navbar-logo">
+  <a href="{{ base_url_absolute }}"><img alt="Logo" width="150px" height="75px" src="{{ theme_url }}/img/logo.svg"></a>
+</div>
+
+<ul class="nav sf-menu navbar-menu">
+    {% if config.themes.photographer.dropdown.enabled %}
+        {{ _self.loop(pages) }}
+        {% else %}
+        {% for page in pages.children %}
+            {% if page.visible %}
+                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                    <li class="{{ current_page }}">
+                        <a href="{{ page.url }}">
+                            {{ page.menu }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% for mitem in site.menu %}
+            <li>
+                <a href="{{ mitem.link }}">
+                    {{ mitem.text }}
+                </a>
+                {% if mitem.submenu %}
+                    <ul>
+                        {% for sub1 in mitem.submenu %}
+                            <li>{% if loop.first %}<img src="{{ theme_url }}/img/arrowup.png" alt="">{% endif %}
+                                <a href="{{ sub1.link }}">
+                                    {{ sub1.text }}
+                                </a>
+                                {% if sub1.submenu %}
+                                    <ul>
+                                        {% for sub2 in sub1.submenu %}
+                                            <li>
+                                                <a href="{{ sub2.link }}">
+                                                    {{ sub2.text }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="navbar-button">
+      <a href="/kapcsolat" class="btn btn-primary btn-sm">Ajánlatkérés</a>
+
+    </div>
+     {% include 'partials/language-selector.html.twig' %}
+
+
+</div>
+-->

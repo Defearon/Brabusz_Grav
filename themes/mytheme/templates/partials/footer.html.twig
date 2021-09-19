@@ -1,0 +1,7 @@
+<section id="custom-footer" class="custom-footer">
+<section class="container {{ grid_size }}">
+  {% if page.find('/modules/footer') %}
+        {{ page.find('/modules/footer').content|raw }}
+  {% endif %}
+</section>
+</section>
