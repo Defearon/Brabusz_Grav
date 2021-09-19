@@ -1,0 +1,30 @@
+title: Email
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        email:
+          type: tab
+          title: Email
+
+          fields:
+            spacer_text:
+              type: spacer
+              title: Szövegmezők
+
+            header.work.title:
+                label: 'Szövegmező 1'
+                type: text
+            header.work.description:
+                label: 'Szövegmező 2'
+                type: textarea
+            header.hiretitle:
+              label: 'Szövegmező 3'
+              type: textarea

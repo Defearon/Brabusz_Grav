@@ -1,0 +1,33 @@
+name: BrabuszTheme
+slug: brabusz
+type: theme
+version: 1.0.0
+description: "Brabusz"
+icon: group
+author:
+  name: Szabó Márk
+license: Szabó Márk
+
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    color:
+        type: text
+        label: Color
+        default: 'blue'
+        validate:
+          type: text
