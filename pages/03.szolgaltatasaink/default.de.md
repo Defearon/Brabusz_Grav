@@ -32,3 +32,13 @@ markdown:
 ...
 
 </div>
+
+## Schedule optimization
+<div markdown=1 class="polaroid-img anchor" id="">
+[ui-polaroid angle="0" margin="0 50px 50px 0" position="left" gloss="false" title=""]
+![](optimalizalas.jpg)
+[/ui-polaroid]
+
+...
+
+</div>
