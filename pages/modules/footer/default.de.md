@@ -47,7 +47,7 @@ markdown:
 
 [div]
 ## <i class="las la-money-check"></i> Daten
-#### Steuernummer: 11-09-029067
+#### Steuernummer: 27433984-2-11
 #### Kontonummer: 58600434-17065496
 #### Handelsregisternummer: 11-09-029067
 [/div]
