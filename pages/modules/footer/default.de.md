@@ -13,6 +13,7 @@ markdown:
 ## <i class="las la-building"></i> Büro
 #### 2523 Sárisáp Május 1. sor 23.  
 #### [+36 33 450 610](tel:+3633450610)
+#### [+36 30 316 9048](tel:+36303169048)  
 [/div]
 
 [div]
@@ -46,8 +47,8 @@ markdown:
 
 [div]
 ## <i class="las la-money-check"></i> Daten
-#### Steuernummer: 65984725-2-31
-#### Kontonummer: 58600434-11224677
+#### Steuernummer: 11-09-029067
+#### Kontonummer: 58600434-17065496
 #### Handelsregisternummer: 11-09-029067
 [/div]
 
