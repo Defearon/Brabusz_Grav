@@ -17,5 +17,8 @@ categories:
         value: '1'
         name: 'Nagy busz'
         description: '(31-60 fő)'
+published: true
+metadata:
+    járművek: ''
 ---
 
