@@ -15,20 +15,17 @@ gallery:
         type: image/jpeg
         size: 1319704
         path: 2.JPG
-    IMG_0274.JPG:
-        name: IMG_0274.JPG
+    'Képernyőfotó 2021-09-10 - 18.52.04.jpg':
+        name: 'Képernyőfotó 2021-09-10 - 18.52.04.jpg'
         type: image/jpeg
-        size: 958966
-        path: IMG_0274.JPG
-    IMG_1549.jpg:
-        name: IMG_1549.jpg
+        size: 1932040
+        path: 'Képernyőfotó 2021-09-10 - 18.52.04.jpg'
+    'Képernyőfotó 2021-09-10 - 18.51.54.jpg':
+        name: 'Képernyőfotó 2021-09-10 - 18.51.54.jpg'
         type: image/jpeg
-        size: 1051686
-        path: IMG_1549.jpg
-    IMG_1548.jpg:
-        name: IMG_1548.jpg
-        type: image/jpeg
-        size: 919314
-        path: IMG_1548.jpg
+        size: 2104530
+        path: 'Képernyőfotó 2021-09-10 - 18.51.54.jpg'
 visible: false
+media_order: '2.JPG,Képernyőfotó 2021-09-10 - 18.52.04.jpg,Képernyőfotó 2021-09-10 - 18.51.54.jpg'
 ---
+

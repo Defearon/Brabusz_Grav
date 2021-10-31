@@ -98,10 +98,10 @@ tr td.gpm-details {
   color: #ffffff;
 }
 .button.secondary.dropdown-toggle {
-  border-left: 1px solid #006294;
+  border-left: 1px solid #006295;
 }
 .button.secondary.dropdown-toggle {
-  border-left: 1px solid #006294;
+  border-left: 1px solid #006295;
 }
 .button.danger {
   color: rgba(255, 255, 255, 0.85);
@@ -293,7 +293,7 @@ tr td.gpm-details {
   color: #ffffff;
 }
 #admin-main .grav-update a.button.dropdown-toggle, #admin-main .grav-update span.button.dropdown-toggle, #admin-main .grav-update button.button.dropdown-toggle {
-  border-left: 1px solid #6c4d8e;
+  border-left: 1px solid #6b4d8f;
 }
 #admin-main .titlebar {
   background: #ffffff;
@@ -362,12 +362,6 @@ tr td.gpm-details {
 #admin-main .admin-block {
   background: #ffffff;
   color: #6f7b8a;
-}
-#admin-main .admin-block a:not(.button) {
-  color: #0090D9;
-}
-#admin-main .admin-block a:not(.button):hover {
-  color: #007fc0;
 }
 #admin-main .admin-block h1 {
   color: #414147;
@@ -533,6 +527,9 @@ form .form-input-wrapper .form-input-addon.copy-to-clipboard {
 }
 form .form-input-wrapper .form-input-addon.copy-to-clipboard:hover {
   background: #007fc0;
+}
+form .form-input-wrapper input[name="data[folder]"].highlight {
+  background-color: #ffffd7;
 }
 form .selectize-control.single.plugin-remove_button .selectize-input .item, form .selectize-control.single.plugin-remove_button .selectize-input .remove-single, form .selectize-control.multi .selectize-input .item, form .selectize-control.multi .selectize-input .remove-single {
   color: #ffffff !important;
@@ -851,7 +848,7 @@ form .form-display-wrapper table tr {
   color: #ffffff;
 }
 .info a.button.dropdown-toggle, .info span.button.dropdown-toggle, .info button.button.dropdown-toggle {
-  border-left: 1px solid #6c4d8e;
+  border-left: 1px solid #6b4d8f;
 }
 .info-reverse {
   color: #77559D;
@@ -897,11 +894,11 @@ form .form-display-wrapper table tr {
   background: #c34646;
 }
 .error a.button:focus, .error a.button:hover, .error span.button:focus, .error span.button:hover, .error button.button:focus, .error button.button:hover, .warning a.button:focus, .warning a.button:hover, .warning span.button:focus, .warning span.button:hover, .warning button.button:focus, .warning button.button:hover {
-  background: #a63c3b;
+  background: #a63c3c;
   color: #ffffff;
 }
 .error a.button.dropdown-toggle, .error span.button.dropdown-toggle, .error button.button.dropdown-toggle, .warning a.button.dropdown-toggle, .warning span.button.dropdown-toggle, .warning button.button.dropdown-toggle {
-  border-left: 1px solid #c95a59;
+  border-left: 1px solid #c95959;
 }
 .error-reverse, .warning-reverse {
   color: #F45857;
@@ -1794,54 +1791,4 @@ span.range-append {
 }
 .jqCron-container.disable .jqCron-selector-title {
   background: #ffffff !important;
-}
-/* Admin Styles */
-#directory .search-wrapper input, #directory .search-wrapper select {
-  color: #646e7c;
-  border: 1px solid #e6e6e6;
-  background-color: #fcfcfc;
-}
-#directory .search-wrapper input::-webkit-input-placeholder, #directory .search-wrapper select::-webkit-input-placeholder {
-  color: #a7afb8;
-}
-#directory .search-wrapper input::-moz-placeholder, #directory .search-wrapper select::-moz-placeholder {
-  color: #a7afb8;
-}
-#directory .search-wrapper input:-moz-placeholder, #directory .search-wrapper select:-moz-placeholder {
-  color: #a7afb8;
-}
-#directory .search-wrapper input:-ms-input-placeholder, #directory .search-wrapper select:-ms-input-placeholder {
-  color: #a7afb8;
-}
-#directory .edit-action {
-  color: #0090D9 !important;
-}
-#directory .delete-action {
-  color: #F45857 !important;
-}
-#directory thead tr {
-  background: #fafafa;
-}
-#directory tbody tr:nth-child(even) {
-  background: white;
-}
-#directory i.published {
-  color: #27AE60;
-}
-#directory i.unpublished {
-  color: #E74C3C;
-}
-#directory .flex-list-pagination {
-  background: #fcfcfc;
-  border-top: 1px solid #f2f2f2;
-}
-#directory .flex-list-pagination .flex-objects-pagination .button {
-  color: #414147;
-}
-#directory .flex-list-pagination .flex-objects-pagination .button.active {
-  color: #ffffff;
-  background: #0090D9;
-}
-#directory .flex-list-pagination .flex-objects-pagination .button.disabled {
-  color: #99a2ad;
 }

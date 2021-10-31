@@ -41,11 +41,11 @@ forms:
             submit:
                 type: submit
                 value: Senden
-                classes: btn btn-primary top-bottom-margin-10 animate__animated
+                classes: 'btn btn-primary top-bottom-margin-10 animate__animated'
             reset:
                 type: reset
                 value: Zurücksetzen
-                classes: btn btn-danger top-bottom-margin-10 animate__animated
+                classes: 'btn btn-danger top-bottom-margin-10 animate__animated'
         process:
             save:
                 fileprefix: contact-
@@ -70,8 +70,9 @@ title: Kontakt
 | **Werkstatt:** | 2523 Sárisáp Fő út 51.|
 | **Postanschrift:** | 2523 Sárisáp Május 1. sor 23.,  [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com) |
 | **Stationäre Hilfe** | [+36 30 316 9048,   ](tel:+36303169048) [+36 30 339 2925](tel:+36303392925)|
-| **Steuernummer:** | 	65984725-2-31 |
-| **Kontonummer:** | 	58600434-11224677 |
+| **Steuernummer:** | 	27433984-2-11 |
+| **Kontonummer:** | 	58600434-17065496 |
+| **Handelsregisternummer:** | 	11-09-029067 |
 | | [www.brabusz.hu](/) |
 </div>
 

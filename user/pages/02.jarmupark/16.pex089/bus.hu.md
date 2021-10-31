@@ -10,16 +10,6 @@ image:
         size: 5104826
         path: IMG_0929.JPG
 gallery:
-    1.18.42.jpg:
-        name: 1.18.42.jpg
-        type: image/jpeg
-        size: 1525218
-        path: 1.18.42.jpg
-    'IMG_0915 2.JPG':
-        name: 'IMG_0915 2.JPG'
-        type: image/jpeg
-        size: 4362944
-        path: 'IMG_0915 2.JPG'
     IMG_0928.JPG:
         name: IMG_0928.JPG
         type: image/jpeg
@@ -37,3 +27,4 @@ gallery:
         path: IMG_0929.JPG
 visible: false
 ---
+

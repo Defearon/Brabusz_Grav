@@ -2,7 +2,9 @@
 title: Referenciák
 slug: referenciak
 class: privacy_page
+media_order: 'Aptiv.png,DHL.png,empty.png,Gedia.png,Gyermelyi.png,Huawei.jpg,Knaus.png,Livita.jpg,Mahle.png,Quehenberger.png,Samsung.png,Suzuki.jpg,Wescast.png,Kienle-Spiess.png'
 ---
+
 [center]
 #**Referenciák**
 [/center]
@@ -30,8 +32,8 @@ class: privacy_page
 
 ![Samsung](Samsung.png?resize=250,150&classes=col,wobble-vertical-on-hover "Samsung")  
 
-![Byd](Byd.png?resize=250,150&classes=col,wobble-vertical-on-hover "Byd")  
-
 ![Suzuki](Suzuki.jpg?resize=250,150&classes=col,wobble-vertical-on-hover "Suzuki")  
+
+![Kienle-Spiess](Kienle-Spiess.png?resize=250,150&classes=col,wobble-vertical-on-hover "Kienle-Spiess") 
 
 [/div]

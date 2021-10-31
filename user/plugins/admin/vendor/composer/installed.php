@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5de805e3409611ee484267d47022e3ad93a9c2f0',
+    'reference' => '092e26c2c6643e0e5a655fd77f7da8baaec48186',
     'name' => 'getgrav/grav-plugin-admin',
   ),
   'versions' => 
@@ -18,25 +18,25 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5de805e3409611ee484267d47022e3ad93a9c2f0',
+      'reference' => '092e26c2c6643e0e5a655fd77f7da8baaec48186',
     ),
     'laminas/laminas-xml' => 
     array (
-      'pretty_version' => '1.3.0',
-      'version' => '1.3.0.0',
+      'pretty_version' => '1.3.1',
+      'version' => '1.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '844dc64557b1ad8a2e0eadb741510ba992674f99',
+      'reference' => '2eada592359aec9d9e55339270b621295cff3a4f',
     ),
     'laminas/laminas-zendframework-bridge' => 
     array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6ede70583e101030bcace4dcddd648f760ddf642',
+      'reference' => 'bf180a382393e7db5c1e8d0f2ec0c4af9c724baf',
     ),
     'miniflux/picofeed' => 
     array (
@@ -56,12 +56,12 @@
     ),
     'scssphp/scssphp' => 
     array (
-      'pretty_version' => 'v1.4.1',
-      'version' => '1.4.1.0',
+      'pretty_version' => 'v1.8.1',
+      'version' => '1.8.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ba86c963b94ec7ebd6e19d90cdab90d89667dbf7',
+      'reference' => '5e37759a63caf54392a4b709358a39ac7425a69f',
     ),
     'symfony/polyfill-php72' => 
     array (

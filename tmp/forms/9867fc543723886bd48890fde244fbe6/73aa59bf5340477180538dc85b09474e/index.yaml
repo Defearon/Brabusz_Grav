@@ -1,0 +1,95 @@
+form: flex-pages
+unique_id: 73aa59bf5340477180538dc85b09474e
+url: 'https://brabusz.hu/admin/pages/modules/footer'
+user:
+  username: brabuszadmin
+  email: markusz996@gmail.com
+timestamps:
+  created: 1632083405
+  updated: 1632083406
+data:
+  header:
+    title: null
+    media_order: null
+    body_classes: null
+    order_by: null
+    order_manual: null
+    markdown:
+      extra: true
+    published: null
+    date: null
+    publish_date: null
+    unpublish_date: null
+    metadata: null
+    taxonomy: null
+    dateformat: null
+    menu: null
+    slug: null
+    redirect: null
+    process: null
+    twig_first: null
+    never_cache_twig: null
+    child_type: null
+    routable: null
+    cache_enable: null
+    visible: null
+    debugger: null
+    template: null
+    append_url_extension: null
+    routes:
+      default: null
+      canonical: null
+      aliases: null
+    admin:
+      children_display_order: null
+    login:
+      visibility_requires_access: null
+    access: null
+    permissions:
+      inherit: null
+      authors: null
+      groups: null
+  content: "[center]\n## © Brabusz Kft.\n<hr>\n\n[div id=\"contact\" class=\"column-wrapper\"]\n\n[div]\n## <i class=\"las la-building\"></i> Iroda\n#### 2523 Sárisáp Május 1. sor 23.  \n#### [+36 33 450 610](tel:+3633450610)\n[/div]\n\n[div]\n## <i class=\"las la-industry\"></i> Telephely\n#### 2529 Annavölgy hrsz. 1789.\n[/div]\n\n\n[div]\n## <i class=\"las la-tools\"></i> Műhely\n#### 2523 Sárisáp Fő út 51.\n[/div]\n\n\n[div]\n## <i class=\"las la-envelope\"></i> Levelezési cím\n#### 2523 Sárisáp Május 1. sor 23.\n[/div]\n\n\n[div]\n## <i class=\"las la-at\"></i> E-mail\n#### [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com)\n[/div]\n\n[div]\n## <i class=\"las la-user\"></i> Állandó ügyelet\n#### [+36 30 316 9048](tel:+36303169048)  \n#### [+36 30 339 2925](tel:+36303392925)\n[/div]\n\n[div]\n## <i class=\"las la-money-check\"></i> Adatok\n#### Adószám: 65984725-2-31\n#### Bankszámlaszám: 58600434-11224677\n#### Cégjegyzék szám: 11-09-029067\n[/div]\n\n[/div]\n\n<br/>\n\n<iframe src=\"https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbrabusz.szemelyszallitas&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=566471170541531\" width=\"340\" height=\"130\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>\n\n\n<hr>\nA weboldalt készítette  \n[Szabó Márk](https://erosit.hu/webfejlesztes)\n[/center]\n"
+  folder: footer
+  route: /modules
+  name: default
+  ordering: false
+  order: null
+  blueprint: null
+  lang: hu
+  xss_check: null
+  value: null
+  _post_entries_save: null
+files: {  }
+object:
+  type: pages
+  key: modules/footer
+  storage_key: modules/footer|default.hu
+  timestamp: 1631278463
+  serialized:
+    __META:
+      key: modules/footer
+      storage_key: modules/footer|default.hu
+      template: default
+      storage_timestamp: 1631278463
+      markdown:
+        de: { default: 1631278463 }
+        en: { default: 1631278463 }
+        hu: { default: 1631278463 }
+      checksum: 8afb62f13eaa82f6473227a1e73cc715
+      exists: true
+      lang: hu
+    storage_key: modules/footer|default.hu
+    parent_key: modules
+    order: false
+    folder: footer
+    template: default
+    lang: hu
+    header:
+      markdown:
+        extra: true
+    root: false
+    frontmatter: "markdown:\n    extra: true"
+    markdown: "[center]\n## © Brabusz Kft.\n<hr>\n\n[div id=\"contact\" class=\"column-wrapper\"]\n\n[div]\n## <i class=\"las la-building\"></i> Iroda\n#### 2523 Sárisáp Május 1. sor 23.  \n#### [+36 33 450 610](tel:+3633450610)\n[/div]\n\n[div]\n## <i class=\"las la-industry\"></i> Telephely\n#### 2529 Annavölgy hrsz. 1789.\n[/div]\n\n\n[div]\n## <i class=\"las la-tools\"></i> Műhely\n#### 2523 Sárisáp Fő út 51.\n[/div]\n\n\n[div]\n## <i class=\"las la-envelope\"></i> Levelezési cím\n#### 2523 Sárisáp Május 1. sor 23.\n[/div]\n\n\n[div]\n## <i class=\"las la-at\"></i> E-mail\n#### [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com)\n[/div]\n\n[div]\n## <i class=\"las la-user\"></i> Állandó ügyelet\n#### [+36 30 316 9048](tel:+36303169048)  \n#### [+36 30 339 2925](tel:+36303392925)\n[/div]\n\n[div]\n## <i class=\"las la-money-check\"></i> Adatok\n#### Adószám: 65984725-2-31\n#### Bankszámlaszám: 58600434-11224677\n[/div]\n\n[/div]\n\n<br/>\n\n<iframe src=\"https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbrabusz.szemelyszallitas&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=566471170541531\" width=\"340\" height=\"130\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>\n\n\n<hr>\nA weboldalt készítette  \n[Szabó Márk](https://erosit.hu/webfejlesztes)\n[/center]\n"
+    slug: footer
+    name: default.hu.md

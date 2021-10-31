@@ -5,6 +5,7 @@ slug: szolgaltatasaink
 class: privacy_page
 markdown:
     extra: true
+media_order: 'kulonjarat.jpg,munkasszallitas.jpg,test.png,optimalizalas.jpg'
 ---
 
 [center]
@@ -32,3 +33,15 @@ markdown:
 ...
 
 </div>
+
+
+## Menetrend optimalizálás
+<div markdown=1 class="polaroid-img anchor" id="">
+[ui-polaroid angle="0" margin="0 50px 50px 0" position="left" gloss="false" title=""]
+![](optimalizalas.jpg)
+[/ui-polaroid]
+
+...
+
+</div>
+
