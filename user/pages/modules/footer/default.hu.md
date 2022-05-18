@@ -1,3 +1,8 @@
+---
+markdown:
+    extra: true
+---
+
 [center]
 ## © Brabusz Kft.
 <hr>

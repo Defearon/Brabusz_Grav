@@ -1,0 +1,114 @@
+form: flex-pages
+unique_id: 78fa7470f4a6714f0e0e88d931d6b1ab
+url: 'https://brabusz.hu/admin/pages/kapcsolat'
+user:
+  username: brabuszadmin
+  email: markusz996@gmail.com
+timestamps:
+  created: 1632083164
+  updated: 1632083164
+data:
+  header:
+    title: Kapcsolat
+    media_order: null
+    body_classes: null
+    order_by: null
+    order_manual: null
+    work:
+      title: 'Keressen bizalommal!'
+      description: 'A Brabusz csapata szívesen válaszol, bármilyen kérdésre, észrevételre, ami az utazással kapcsolatos'
+    hiretitle: 'Kérem töltse ki az alábbi űrlapot és várjon türelmesen kollégánk visszajelzésére.'
+    markdown:
+      extra: true
+    forms:
+      contact-form:
+        fields: { name: { label: Név, placeholder: 'Az Ön neve...', autocomplete: 'on', type: text, classes: form-control, validate: { required: true } }, email: { label: E-mail, placeholder: 'Az Ön e-mail címe...', type: email, classes: form-control, validate: { required: true } }, telephone: { label: Telefonszám, placeholder: 'Az Ön telefonszáma...', type: text, classes: form-control, validate: { required: true } }, message: { label: Üzenet, placeholder: 'Gépelje be üzenetét...', type: textarea, classes: form-control, validate: { required: true } } }
+        buttons: { submit: { type: submit, value: Küldés, classes: 'btn btn-primary top-bottom-margin-10' }, reset: { type: reset, value: Töröl, classes: 'btn btn-danger top-bottom-margin-10' } }
+        process: { save: { fileprefix: contact-, dateformat: Ymd-His-u, extension: txt, body: '{% include ''forms/data.txt.twig'' %}' }, email: { subject: '[Site Contact Form] {{ form.value.name|e }}', body: '{% include ''forms/data.html.twig'' %}' }, message: 'Köszönjük levelét!', display: thankyou }
+    published: null
+    date: null
+    publish_date: null
+    unpublish_date: null
+    metadata: null
+    taxonomy: null
+    dateformat: null
+    menu: null
+    slug: null
+    redirect: null
+    process: null
+    twig_first: null
+    never_cache_twig: null
+    child_type: null
+    routable: null
+    cache_enable: null
+    visible: null
+    debugger: null
+    template: null
+    append_url_extension: null
+    routes:
+      default: null
+      canonical: null
+      aliases: null
+    admin:
+      children_display_order: null
+    login:
+      visibility_requires_access: null
+    access: null
+    permissions:
+      inherit: null
+      authors: null
+      groups: null
+  content: "##Kapcsolat\n[center]\n<div markdown=\"1\" class=\"title6\">\n| | |\n|: ----------- |: ----------- |\n| **Iroda:** | \t2523 Sárisáp Május 1. sor 23., [+36 33 450 610](tel:+3633450610) |\n| **Telephely:** | 2529 Annavölgy hrsz. 1789. |\n| **Műhely:** | 2523 Sárisáp Fő út 51.|\n| **Levelezési cím:** | 2523 Sárisáp Május 1. sor 23.,  [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com) |\n| **Állandó ügyelet:** | [+36 30 316 9048,   ](tel:+36303169048) [+36 30 339 2925](tel:+36303392925)|\n| **Adószám:** | \t65984725-2-31 |\n| **Bankszámlaszám:** | \t58600434-11224677 |\n| **Cégjegyzék szám:** | \t11-09-029067 |\n| | [www.brabusz.hu](/) |\n</div>\n[/center]\n\n\n\n<div class=\"maps\" style=\"width: 100%\"><iframe class=\"embed-responsive-item\" width=\"100%\" height=\"600\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=S%C3%A1ris%C3%A1p,%20M%C3%A1jus%201.%20sor%2023,%202523+(Brabusz)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed\"></iframe><a href=\"https://www.maps.ie/route-planner.htm\"></a></div>\n"
+  folder: kapcsolat
+  route: null
+  name: about
+  ordering: true
+  order: null
+  blueprint: null
+  lang: hu
+  xss_check: null
+  value: null
+  _post_entries_save: null
+files: {  }
+object:
+  type: pages
+  key: kapcsolat
+  storage_key: 05.kapcsolat|about.hu
+  timestamp: 1631278463
+  serialized:
+    __META:
+      key: kapcsolat
+      storage_key: 05.kapcsolat|about.hu
+      template: about
+      storage_timestamp: 1631278463
+      markdown:
+        de: { about: 1631278463 }
+        en: { about: 1631278463 }
+        hu: { about: 1631278463 }
+      children:
+        thankyou: false
+      checksum: f2c2c235324e63f5e6b094390ffad7a7
+      exists: true
+      lang: hu
+      clone: true
+    storage_key: 05.kapcsolat|about.hu
+    parent_key: ''
+    order: '05.'
+    folder: kapcsolat
+    template: about
+    lang: ''
+    header:
+      markdown:
+        extra: true
+      work:
+        title: 'Keressen bizalommal!'
+        description: 'A Brabusz csapata szívesen válaszol, bármilyen kérdésre, észrevételre, ami az utazással kapcsolatos'
+      hiretitle: 'Kérem töltse ki az alábbi űrlapot és várjon türelmesen kollégánk visszajelzésére.'
+      forms:
+        contact-form: { fields: { name: { label: Név, placeholder: 'Az Ön neve...', autocomplete: 'on', type: text, classes: form-control, validate: { required: true } }, email: { label: E-mail, placeholder: 'Az Ön e-mail címe...', type: email, classes: form-control, validate: { required: true } }, telephone: { label: Telefonszám, placeholder: 'Az Ön telefonszáma...', type: text, classes: form-control, validate: { required: true } }, message: { label: Üzenet, placeholder: 'Gépelje be üzenetét...', type: textarea, classes: form-control, validate: { required: true } } }, buttons: { submit: { type: submit, value: Küldés, classes: 'btn btn-primary top-bottom-margin-10' }, reset: { type: reset, value: Töröl, classes: 'btn btn-danger top-bottom-margin-10' } }, process: { save: { fileprefix: contact-, dateformat: Ymd-His-u, extension: txt, body: '{% include ''forms/data.txt.twig'' %}' }, email: { subject: '[Site Contact Form] {{ form.value.name|e }}', body: '{% include ''forms/data.html.twig'' %}' }, message: 'Köszönjük levelét!', display: thankyou } }
+      title: Kapcsolat
+    root: false
+    frontmatter: "markdown:\n    extra: true\nwork:\n    title: 'Keressen bizalommal!'\n    description: 'A Brabusz csapata szívesen válaszol, bármilyen kérdésre, észrevételre, ami az utazással kapcsolatos'\nhiretitle: 'Kérem töltse ki az alábbi űrlapot és várjon türelmesen kollégánk visszajelzésére.'\nforms:\n    contact-form:\n        fields:\n            name:\n                label: Név\n                placeholder: 'Az Ön neve...'\n                autocomplete: 'on'\n                type: text\n                classes: form-control\n                validate:\n                    required: true\n            email:\n                label: E-mail\n                placeholder: 'Az Ön e-mail címe...'\n                type: email\n                classes: form-control\n                validate:\n                    required: true\n            telephone:\n                label: Telefonszám\n                placeholder: 'Az Ön telefonszáma...'\n                type: text\n                classes: form-control\n                validate:\n                    required: true\n            message:\n                label: Üzenet\n                placeholder: 'Gépelje be üzenetét...'\n                type: textarea\n                classes: form-control\n                validate:\n                    required: true\n        buttons:\n            submit:\n                type: submit\n                value: Küldés\n                classes: btn btn-primary top-bottom-margin-10\n            reset:\n                type: reset\n                value: Töröl\n                classes: btn btn-danger top-bottom-margin-10\n        process:\n            save:\n                fileprefix: contact-\n                dateformat: Ymd-His-u\n                extension: txt\n                body: '{% include ''forms/data.txt.twig'' %}'\n            email:\n                subject: '[Site Contact Form] {{ form.value.name|e }}'\n                body: '{% include ''forms/data.html.twig'' %}'\n            message: 'Köszönjük levelét!'\n            display: thankyou\ntitle: Kapcsolat"
+    markdown: "##Kapcsolat\n[center]\n<div markdown=\"1\" class=\"title6\">\n| | |\n|: ----------- |: ----------- |\n| **Iroda:** | \t2523 Sárisáp Május 1. sor 23., [+36 33 450 610](tel:+3633450610) |\n| **Telephely:** | 2529 Annavölgy hrsz. 1789. |\n| **Műhely:** | 2523 Sárisáp Fő út 51.|\n| **Levelezési cím:** | 2523 Sárisáp Május 1. sor 23.,  [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com) |\n| **Állandó ügyelet:** | [+36 30 316 9048,   ](tel:+36303169048) [+36 30 339 2925](tel:+36303392925)|\n| **Adószám:** | \t65984725-2-31 |\n| **Bankszámlaszám:** | \t58600434-11224677 |\n| | [www.brabusz.hu](/) |\n</div>\n[/center]\n\n\n\n<div class=\"maps\" style=\"width: 100%\"><iframe class=\"embed-responsive-item\" width=\"100%\" height=\"600\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=S%C3%A1ris%C3%A1p,%20M%C3%A1jus%201.%20sor%2023,%202523+(Brabusz)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed\"></iframe><a href=\"https://www.maps.ie/route-planner.htm\"></a></div>\n"
+    slug: kapcsolat
+    name: about.hu.md

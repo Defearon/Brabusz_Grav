@@ -5,14 +5,9 @@ declare(strict_types=1);
 namespace Grav\Plugin\FlexObjects\Controllers;
 
 use Exception;
-use Grav\Common\Form\FormFlash;
-use Grav\Common\Grav;
 use Grav\Common\Page\Interfaces\PageInterface;
-use Grav\Common\Page\Media;
 use Grav\Common\Page\Medium\Medium;
 use Grav\Common\Page\Medium\MediumFactory;
-use Grav\Common\Session;
-use Grav\Common\Uri;
 use Grav\Common\Utils;
 use Grav\Framework\Flex\FlexObject;
 use Grav\Framework\Flex\Interfaces\FlexAuthorizeInterface;
@@ -48,13 +43,21 @@ class MediaController extends AbstractController
             throw new RuntimeException('Not Found', 404);
         }
 
+        // Get updated object from Form Flash.
+        $flash = $this->getFormFlash($object);
+        if ($flash->exists()) {
+            $object = $flash->getObject() ?? $object;
+            $object->update([], $flash->getFilesByFields());
+        }
+
         // Get field for the uploaded media.
         $field = $this->getPost('name', 'undefined');
         if ($field === 'undefined') {
             $field = null;
         }
 
-        $files = $this->getRequest()->getUploadedFiles();
+        $request = $this->getRequest();
+        $files = $request->getUploadedFiles();
         if ($field && isset($files['data'])) {
             $files = $files['data'];
             $parts = explode('.', $field);
@@ -87,12 +90,16 @@ class MediaController extends AbstractController
         $object->checkUploadedMediaFile($file, $filename, $field);
 
         try {
-            $flash = $this->getFormFlash($object);
+            // TODO: This only merges main level data, but is good for ordering (for now).
+            $data = $flash->getData() ?? [];
+            $data = array_replace($data, (array)$this->getPost('data'));
+
             $crop = $this->getPost('crop');
             if (is_string($crop)) {
-                $crop = json_decode($crop, true);
+                $crop = json_decode($crop, true, 512, JSON_THROW_ON_ERROR);
             }
 
+            $flash->setData($data);
             $flash->addUploadedFile($file, $field, $crop);
             $flash->save();
         } catch (Exception $e) {
@@ -101,7 +108,7 @@ class MediaController extends AbstractController
 
         // Include exif metadata into the response if configured to do so
         $metadata = [];
-        $include_metadata = $this->getGrav()['config']->get('system.media.auto_metadata_exif', false);
+        $include_metadata = $this->grav['config']->get('system.media.auto_metadata_exif', false);
         if ($include_metadata) {
             $medium = MediumFactory::fromUploadedFile($file);
 
@@ -198,7 +205,7 @@ class MediaController extends AbstractController
 
         // Include exif metadata into the response if configured to do so
         $metadata = [];
-        $include_metadata = $this->getGrav()['config']->get('system.media.auto_metadata_exif', false);
+        $include_metadata = $this->grav['config']->get('system.media.auto_metadata_exif', false);
         if ($include_metadata) {
             $basename = str_replace(['@3x', '@2x'], '', pathinfo($filename, PATHINFO_BASENAME));
             $media = $object->getMedia();
@@ -209,7 +216,8 @@ class MediaController extends AbstractController
 
         if ($object instanceof PageInterface) {
             // Backwards compatibility to existing plugins.
-            $this->grav->fireEvent('onAdminAfterAddMedia', new Event(['page' => $object]));
+            // DEPRECATED: page
+            $this->grav->fireEvent('onAdminAfterAddMedia', new Event(['object' => $object, 'page' => $object]));
         }
 
         $response = [
@@ -252,6 +260,12 @@ class MediaController extends AbstractController
 
         $object->deleteMediaFile($filename);
 
+        if ($object instanceof PageInterface) {
+            // Backwards compatibility to existing plugins.
+            // DEPRECATED: page
+            $this->grav->fireEvent('onAdminAfterDelMedia', new Event(['object' => $object, 'page' => $object, 'media' => $object->getMedia(), 'filename' => $filename]));
+        }
+
         $response = [
             'code'    => 200,
             'status'  => 'success',
@@ -268,10 +282,17 @@ class MediaController extends AbstractController
     {
         $this->checkAuthorization('media.list');
 
-        /** @var MediaInterface $object */
+        /** @var MediaInterface|FlexObjectInterface $object */
         $object = $this->getObject();
         if (!$object) {
             throw new RuntimeException('Not Found', 404);
+        }
+
+        // Get updated object from Form Flash.
+        $flash = $this->getFormFlash($object);
+        if ($flash->exists()) {
+            $object = $flash->getObject() ?? $object;
+            $object->update([], $flash->getFilesByFields());
         }
 
         $media = $object->getMedia();
@@ -310,34 +331,24 @@ class MediaController extends AbstractController
 
         /** @var FlexObject $object */
         $object = $this->getObject();
-        if (!$object) {
+        if (!$object || !\is_callable([$object, 'getFieldSettings'])) {
             throw new RuntimeException('Not Found', 404);
         }
 
+        // Get updated object from Form Flash.
+        $flash = $this->getFormFlash($object);
+        if ($flash->exists()) {
+            $object = $flash->getObject() ?? $object;
+            $object->update([], $flash->getFilesByFields());
+        }
+
         $name = $this->getPost('name');
-        $settings = $object->getBlueprint()->schema()->getProperty($name);
-        $fieldFolder = $settings['folder'] ?? null;
-        $folderIsString = \is_string($fieldFolder);
-
-        // Backwards compatibility.
-        if ($folderIsString && \in_array($fieldFolder, ['@self', 'self@'])) {
-            $fieldFolder = null;
-        } elseif ($object instanceof PageInterface) {
-            // TODO: Add support for @page, @root and @taxonomy
-            if ($folderIsString && strpos($fieldFolder, '@') !== false) {
-                if (\in_array($fieldFolder, ['@page.self', 'page@.self'])) {
-                    $fieldFolder = null;
-                }
-            }
+        $settings = $name ? $object->getFieldSettings($name) : null;
+        if (empty($settings['media_picker_field'])) {
+            throw new RuntimeException('Not Found', 404);
         }
 
-        if ($folderIsString && $fieldFolder) {
-            // Custom media.
-            $media = new Media($fieldFolder, []);
-        } else {
-            // Object media.
-            $media = $object->getMedia();
-        }
+        $media = $object->getMediaField($name);
 
         $available_files = [];
         $metadata = [];
@@ -361,7 +372,7 @@ class MediaController extends AbstractController
 
         // Peak in the flashObject for optimistic filepicker updates
         $pending_files = [];
-        $sessionField = base64_encode($this->getGrav()['uri']->url());
+        $sessionField = base64_encode($this->grav['uri']->url());
         $flash = $this->getSession()->getFlashObject('files-upload');
         $folder = $media->getPath() ?: null;
 
@@ -390,6 +401,16 @@ class MediaController extends AbstractController
             });
         }
 
+        if (isset($settings['deny'])) {
+            $available_files = array_filter($available_files, function ($file) use ($settings) {
+                return $this->filterDeniedFiles($file, $settings);
+            });
+
+            $pending_files = array_filter($pending_files, function ($file) use ($settings) {
+                return $this->filterDeniedFiles($file, $settings);
+            });
+        }
+
         // Generate thumbs if needed
         if (isset($settings['preview_images']) && $settings['preview_images'] === true) {
             foreach ($available_files as $filename) {
@@ -411,42 +432,6 @@ class MediaController extends AbstractController
     }
 
     /**
-     * @param FlexObjectInterface $object
-     * @return FormFlash
-     */
-    protected function getFormFlash(FlexObjectInterface $object)
-    {
-        $grav = Grav::instance();
-
-        /** @var Session $session */
-        $session = $grav['session'];
-
-        /** @var Uri $uri */
-        $uri = $grav['uri'];
-        $url = $uri->url;
-
-        $formName = $this->getPost('__form-name__');
-        if (!$formName) {
-            // Legacy call without form name.
-            $form = $object->getForm();
-            $formName = $form->getName();
-            $uniqueId = $form->getUniqueId();
-        } else {
-            $uniqueId = $this->getPost('__unique_form_id__') ?: $formName ?: sha1($url);
-        }
-
-        $config = [
-            'session_id' => $session->getId(),
-            'unique_id' => $uniqueId,
-            'form_name' => $formName,
-        ];
-        $flash = new FormFlash($config);
-        $flash->setUrl($url)->setUser($grav['user']);
-
-        return $flash;
-    }
-
-    /**
      * @param string $file
      * @param array $settings
      * @return false|int
@@ -457,7 +442,24 @@ class MediaController extends AbstractController
 
         foreach ((array)$settings['accept'] as $type) {
             $find = str_replace('*', '.*', $type);
-            $valid |= preg_match('#' . $find . '$#', $file);
+            $valid |= preg_match('#' . $find . '$#i', $file);
+        }
+
+        return $valid;
+    }
+
+    /**
+     * @param string $file
+     * @param array $settings
+     * @return false|int
+     */
+    protected function filterDeniedFiles(string $file, array $settings)
+    {
+        $valid = true;
+
+        foreach ((array)$settings['deny'] as $type) {
+            $find = str_replace('*', '.*', $type);
+            $valid = !preg_match('#' . $find . '$#i', $file);
         }
 
         return $valid;

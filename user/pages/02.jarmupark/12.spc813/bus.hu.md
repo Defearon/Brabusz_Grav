@@ -15,5 +15,11 @@ gallery:
         type: image/jpeg
         size: 638490
         path: IMG-4162.jpg
+    IMG_1565.JPG:
+        name: IMG_1565.JPG
+        type: image/jpeg
+        size: 4305247
+        path: IMG_1565.JPG
 visible: false
 ---
+

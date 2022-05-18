@@ -13,7 +13,7 @@ carousel:
     cropZoomWidth: 1500
     cropZoomHeight: 500
 images:
-    0:
+    -
         title: 'Üdvözöljük a Brabusznál!'
         image:
             c1.jpg:
@@ -21,35 +21,23 @@ images:
                 type: image/jpeg
                 size: 896210
                 path: c1.jpg
-    3:
+    -
         image:
             c2.jpg:
                 name: c2.jpg
                 type: image/jpeg
                 size: 218550
                 path: c2.jpg
-    4:
+    -
         image:
-            c3.jpg:
-                name: c3.jpg
+            'Képernyőfotó 2021-09-10 - 19.23.45.jpg':
+                name: 'Képernyőfotó 2021-09-10 - 19.23.45.jpg'
                 type: image/jpeg
-                size: 743664
-                path: c3.jpg
-    1:
-        image:
-            c4.jpg:
-                name: c4.jpg
-                type: image/jpeg
-                size: 590006
-                path: c4.jpg
-    2:
-        image:
-            c5.jpg:
-                name: c5.jpg
-                type: image/jpeg
-                size: 959096
-                path: c5.jpg
+                size: 2208155
+                path: 'Képernyőfotó 2021-09-10 - 19.23.45.jpg'
+media_order: 'c1.jpg,c2.jpg,IMG_2149 másolat.JPG'
 ---
+
 <!--
 [owl-carousel items=1 margin=10 loop=true autoplay=true autoplayTimeout=4000 smartSpeed=1500 autoplayHoverPause=true nav=true]
 <div id="carousel" class="carousel-container" markdown=1>

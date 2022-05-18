@@ -1,0 +1,95 @@
+form: flex-pages
+unique_id: b406de302e8ef61afc95b93e88d3bb84
+url: 'https://brabusz.hu/admin/pages/modules/footer'
+user:
+  username: brabuszadmin
+  email: markusz996@gmail.com
+timestamps:
+  created: 1632083566
+  updated: 1632083613
+data:
+  header:
+    title: null
+    media_order: null
+    body_classes: null
+    order_by: null
+    order_manual: null
+    markdown:
+      extra: true
+    published: null
+    date: null
+    publish_date: null
+    unpublish_date: null
+    metadata: null
+    taxonomy: null
+    dateformat: null
+    menu: null
+    slug: null
+    redirect: null
+    process: null
+    twig_first: null
+    never_cache_twig: null
+    child_type: null
+    routable: null
+    cache_enable: null
+    visible: null
+    debugger: null
+    template: null
+    append_url_extension: null
+    routes:
+      default: null
+      canonical: null
+      aliases: null
+    admin:
+      children_display_order: null
+    login:
+      visibility_requires_access: null
+    access: null
+    permissions:
+      inherit: null
+      authors: null
+      groups: null
+  content: "[center]\n## © Brabusz Kft.\n<hr>\n\n[div id=\"contact\" class=\"column-wrapper\"]\n\n[div]\n## <i class=\"las la-building\"></i> Büro\n#### 2523 Sárisáp Május 1. sor 23.  \n#### [+36 33 450 610](tel:+3633450610)\n[/div]\n\n[div]\n## <i class=\"las la-industry\"></i> Räumlichkeiten\n#### 2529 Annavölgy hrsz. 1789.\n[/div]\n\n\n[div]\n## <i class=\"las la-tools\"></i> Werkstatt\n#### 2523 Sárisáp Fő út 51.\n[/div]\n\n\n[div]\n## <i class=\"las la-envelope\"></i> Postanschrift\n#### 2523 Sárisáp Május 1. sor 23.\n[/div]\n\n\n[div]\n## <i class=\"las la-at\"></i> E-mail\n#### [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com)\n[/div]\n\n[div]\n## <i class=\"las la-user\"></i> Stationäre Hilfe\t\n#### [+36 30 316 9048](tel:+36303169048)  \n#### [+36 30 339 2925](tel:+36303392925)\n[/div]\n\n[div]\n## <i class=\"las la-money-check\"></i> Daten\n#### Steuernummer: 65984725-2-31\n#### Kontonummer: 58600434-11224677\n#### Handelsregisternummer: 11-09-029067\n[/div]\n\n[/div]\n\n<br/>\n\n<iframe src=\"https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbrabusz.szemelyszallitas&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=566471170541531\" width=\"340\" height=\"130\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>\n\n\n<hr>\nDie Website wurde erstellt von  \n[Márk Szabó](https://erosit.hu/webfejlesztes)\n[/center]\n"
+  folder: footer
+  route: /modules
+  name: default
+  ordering: false
+  order: null
+  blueprint: null
+  lang: de
+  xss_check: null
+  value: null
+  _post_entries_save: null
+files: {  }
+object:
+  type: pages
+  key: modules/footer
+  storage_key: modules/footer|default.de
+  timestamp: 1632083566
+  serialized:
+    __META:
+      key: modules/footer
+      storage_key: modules/footer|default.de
+      template: default
+      storage_timestamp: 1632083566
+      markdown:
+        de: { default: 1632083566 }
+        en: { default: 1631278463 }
+        hu: { default: 1632083405 }
+      checksum: 152cfd22e152be35063b799cf790b823
+      exists: true
+      lang: de
+    storage_key: modules/footer|default.de
+    parent_key: modules
+    order: false
+    folder: footer
+    template: default
+    lang: de
+    header:
+      markdown:
+        extra: true
+    root: false
+    frontmatter: "markdown:\n    extra: true"
+    markdown: "[center]\n## © Brabusz Kft.\n<hr>\n\n[div id=\"contact\" class=\"column-wrapper\"]\n\n[div]\n## <i class=\"las la-building\"></i> Büro\n#### 2523 Sárisáp Május 1. sor 23.  \n#### [+36 33 450 610](tel:+3633450610)\n[/div]\n\n[div]\n## <i class=\"las la-industry\"></i> Räumlichkeiten\n#### 2529 Annavölgy hrsz. 1789.\n[/div]\n\n\n[div]\n## <i class=\"las la-tools\"></i> Werkstatt\n#### 2523 Sárisáp Fő út 51.\n[/div]\n\n\n[div]\n## <i class=\"las la-envelope\"></i> Postanschrift\n#### 2523 Sárisáp Május 1. sor 23.\n[/div]\n\n\n[div]\n## <i class=\"las la-at\"></i> E-mail\n#### [brabusz2012@gmail.com](mailto:brabusz2012@gmail.com)\n[/div]\n\n[div]\n## <i class=\"las la-user\"></i> Stationäre Hilfe\t\n#### [+36 30 316 9048](tel:+36303169048)  \n#### [+36 30 339 2925](tel:+36303392925)\n[/div]\n\n[div]\n## <i class=\"las la-money-check\"></i> Daten\n#### Adószám: 65984725-2-31\n#### Bankszámlaszám: 58600434-11224677\n#### Cégjegyzék szám: 11-09-029067\n[/div]\n\n[/div]\n\n<br/>\n\n<iframe src=\"https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbrabusz.szemelyszallitas&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=566471170541531\" width=\"340\" height=\"130\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>\n\n\n<hr>\nDie Website wurde erstellt von  \n[Márk Szabó](https://erosit.hu/webfejlesztes)\n[/center]\n"
+    slug: footer
+    name: default.de.md
